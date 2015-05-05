@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{graphicx}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -111,7 +112,7 @@ pre-set distance of an existing room via push notification.
 
   Users should be able to vote on songs and see the currently playing
   song from the display of their Android smartwatches. This will
-  likely take place via bluetooth communication with their
+  likely take place via Bluetooth communication with their
   smartphones. This step is crucial for the following step since
   smartwatch sensor data will allow for a much more accurate picture
   of user activity within a room.
@@ -167,7 +168,25 @@ is initiated between the two.
 
 \end{enumerate}
 
-\subsection{Software Architecture}
+\subsection{Software Architecture \& Design}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=4in]{ClassDiagram}
+  \caption {UML Diagram of Client-Side Code}
+\end{figure}
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=4in]{mockup.png}
+  \caption {UI Mockup}
+\end{figure}
+
+\begin{figure}[htb!]
+  \centering
+  \includegraphics[width=4in]{usecase-diagram}
+  \caption {Use Case Diagram}
+\end{figure}
+
 
 \pagebreak
 
