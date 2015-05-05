@@ -175,6 +175,7 @@ is initiated between the two.
   \caption {UML Diagram of Client-Side Code}
 \end{figure}
 
+
 \begin{figure}[htb!]
   \centering
   \includegraphics[width=4in]{mockup.png}
@@ -191,11 +192,25 @@ is initiated between the two.
 \pagebreak
 
 \section{Planned Demonstration}
-
+\begin{enumerate}
+At the moment our demonstration is tough to solidify because at the moment we do not know how sensing will play into our final project.  This will only become solidified when we learn more about how we can use sensing to infer a users musical preference. However we think the other usecases in the UML Usecase diagram below can be displayed easily through a 3 phone interaction with 1 host and 2 Listeners. The sensing element will likely require some sort of data visualization to show how sensing influenced the most recent song. This is something that we will further decide when we know what the nature of our sensing usage will be
+\end{enumerate}
 \pagebreak
 
 \section{Implementation Schedule \& Supporting Tools}
 
+\begin{enumerate}
+Tools: At the moment we plan on using several frameworks and APIs to make our project happen. The Spotify Framework is how we will be getting access to music streaming. The Flask Framework is a Python web framework, which we will use for our server. We will also use the Flask framework to allow our server to interface with a mongo database using the Flask MongoEngine. The server and database will be hosted on Heroku. For using music preference to choose music we plan on using the Echo Nest API.
+\newline \newline
+Plan and Schedule:  Our first week we plan on working to get the basic functionality working. Our plan for dividing the work is roughly:
+Mark-Spotify: Login to spotify, play songs, import Playlists
+Patrick-Client Classes: Create Room, Join room, enqueue/dequeue, upvote/downvote
+Zach-Server: Basic Database structure,  Location based room lookup 
+\newline \newline
+Once we have the basic functionality our focus will shift in 2 ways for the next week: get a basic UI working, figure out in what ways we can use sensing through experimenting with the technology.
+\newline \newline
+At the end of the second week (Sunday) we should have a rudimentary version of the app working and an idea of what we want the final app to look like. From here the rest should be implementation that we are able to complete using our one-week iteration structure (Sunday to Sunday.)
 
+\end{enumerate}
 
 \end{document}
