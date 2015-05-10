@@ -22,8 +22,10 @@ libraryDependencies ++= Seq(
   , "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
   , "io.argonaut" %% "argonaut" % "6.0.4"
   , "org.scalatest" % "scalatest_2.11" % "2.2.4" % Test
+  , "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.3"
 )
 
+scalaSource in Test := baseDirectory.value / "test" / "scala"
 
 scalacOptions in Compile += "-feature"
 
