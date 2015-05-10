@@ -8,6 +8,8 @@ import scaloid.playlistr.models.{User, SongRoom}
 abstract class Request {
   abstract val params: Map[String, String]
 
+  // this means that we can rely on toString to resolve to our endpoint names
+  override def toString = super.toString.toLowerCase
 }
 
 case class Join(songRoom: SongRoom, user: User) extends Request {

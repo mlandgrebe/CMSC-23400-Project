@@ -1,6 +1,8 @@
 package scaloid.playlistr.remote
 
+import argonaut.Parse
 import dispatch._
+import scaloid.playlistr.models.Model
 
 import scala.concurrent.Future
 
@@ -19,9 +21,7 @@ object Server {
     hostUrl / request.toString << request.params
   }
 
-  def submit (request: Request): Future[StatusCode] = {
-    for (resp <- Http(parseRequest(request) OK as.String)) yield {
-
-    }
+  def submit[M <: Model] (request: Request): Option[M] = {
+    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[M])
   }
 }
