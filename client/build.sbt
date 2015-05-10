@@ -17,7 +17,12 @@ proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-keepattr
   , "-dontwarn org.scaloid.**" // this can be omitted if current Android Build target is android-16
 )
 
-libraryDependencies += "org.scaloid" %% "scaloid" % "4.0-RC1" withSources() withJavadoc()
+libraryDependencies ++= Seq(
+  "org.scaloid" %% "scaloid" % "4.0-RC1" withSources() withJavadoc()
+  , "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
+  , "io.argonaut" %% "argonaut" % "6.0.4"
+)
+
 
 scalacOptions in Compile += "-feature"
 

@@ -1,7 +1,7 @@
-package scaloid.example
+package scaloid.playlistr.views
 
-import org.scaloid.common._
 import android.graphics.Color
+import org.scaloid.common._
 
 class HelloScaloid extends SActivity {
 
