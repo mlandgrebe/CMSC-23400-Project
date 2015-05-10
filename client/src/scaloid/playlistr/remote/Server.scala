@@ -2,9 +2,9 @@ package scaloid.playlistr.remote
 
 import argonaut.Parse
 import dispatch._
-import scaloid.playlistr.models.Model
+import scaloid.playlistr.models.Models.{User, Model}
 
-import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
  * Singleton to carry around some universal info about our sever. In a better world, some of these things will be read
@@ -21,7 +21,7 @@ object Server {
     hostUrl / request.toString << request.params
   }
 
-  def submit[M <: Model] (request: Request): Option[M] = {
-    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[M])
+  def submit (request: Request): Option[User] = {
+    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[User])
   }
 }

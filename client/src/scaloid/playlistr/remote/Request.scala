@@ -1,12 +1,15 @@
 package scaloid.playlistr.remote
 
+import scaloid.playlistr.models.Models.{User, SongRoom}
+import scaloid.playlistr.models.SongRoom
+import scaloid.playlistr.models.User
 import scaloid.playlistr.models.{User, SongRoom}
 
 /**
  * Created by patrick on 5/9/15.
  */
 abstract class Request {
-  abstract val params: Map[String, String]
+  val params: Map[String, String]
 
   // this means that we can rely on toString to resolve to our endpoint names
   override def toString = super.toString.toLowerCase
