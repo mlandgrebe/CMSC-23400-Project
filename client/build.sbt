@@ -21,7 +21,7 @@ libraryDependencies ++= Seq(
   "org.scaloid" %% "scaloid" % "4.0-RC1" withSources() withJavadoc()
   , "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
   , "io.argonaut" %% "argonaut" % "6.0.4"
-  , "org.scalatest" % "scalatest_2.10" % "2.0" % "test"
+  , "org.scalatest" % "scalatest_2.11" % "2.2.4" % "test"
 )
 
 
