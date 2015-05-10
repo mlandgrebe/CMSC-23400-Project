@@ -4,7 +4,7 @@ javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 
 android.Plugin.androidBuild
 
-name := "hello-scaloid-sbt"
+name := "client"
 
 scalaVersion := "2.11.6"
 
@@ -23,7 +23,10 @@ libraryDependencies ++= Seq(
   , "io.argonaut" %% "argonaut" % "6.0.4"
   , "org.scalatest" % "scalatest_2.11" % "2.2.4" % Test
   , "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.3"
+  , "org.scala-lang.modules" %% "scala-xml" % "1.0.3"
 )
+
+
 
 scalaSource in Test := baseDirectory.value / "test" / "scala"
 
