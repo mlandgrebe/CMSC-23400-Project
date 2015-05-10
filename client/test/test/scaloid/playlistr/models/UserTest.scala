@@ -13,7 +13,7 @@ class UserTest extends FlatSpec with Matchers {
   val testURI = "uri"
   val testName = "John"
   val testUser = new User(testId, testURI, testName)
-  val userJSON = s"{userId=$testId, uri=\"$testURI\", name=\"$testName\""
+  val userJSON = s"{userId=$testId, uri=$testURI, name=$testName"
 
 
   "A user" should "know its parameters" in {
