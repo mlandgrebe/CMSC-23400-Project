@@ -3,29 +3,36 @@ package scaloid.playlistr.remote
 import argonaut.{DecodeJson, Parse}
 import dispatch._
 import scaloid.playlistr.models.Models.{User, Model}
+import com.ning.http.client.Request
+import scaloid.playlistr.remote.APIRequest.{Create, APIRequest}
+import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
 
 import scala.concurrent.ExecutionContext.Implicits.global
+import scalaz.{-\/, \/}
 
 /**
- * Singleton to carry around some universal info about our sever. In a better world, some of these things will be read
+ * In a better world, some of these things will be read
  * from a configuration file.
  */
 object Server {
-  val baseUrl = host("localhost")
-  val port = 8080
-
-  def hostUrl = baseUrl / port
-
-  // We're going to rely on case class's toString to to the Right Thing
-  private def parseRequest (request: Request) : Req = {
-    hostUrl / request.toString << request.params
-  }
-
-  def submit[M <: Model] (request: Request)(implicit decode: DecodeJson[M]): Option[M] = {
-    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[M])
-  }
+  val defaultBaseUrl = host("localhost")
+  val defaultPort = 8080
 }
 
-class Server(hostUrl : Req = Server.hostUrl) {
+class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort) {
 
+  // We're going to rely on case class's toString to to the Right Thing
+  private def parseRequest (request: APIRequest) : (Request, OkFunctionHandler[String]) = {
+    (hostUrl / request.toString << request.params) OK as.String
+  }
+
+  // We want a function that goes from Either[Throwable, String] -> \/[String, String] to
+  // play nice with scalaz
+
+  def submit[A <: APIRequest](request: A): Future[Either[String, APIResponseType]] =
+    for(res <- Http(parseRequest(request)).either) yield
+      res match {
+        case Left(exc) => Left("Connection error: " + exc.getMessage)
+        case Right(str) => request parseResponse str
+      }
 }
