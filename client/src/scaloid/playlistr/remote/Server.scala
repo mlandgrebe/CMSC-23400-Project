@@ -1,6 +1,6 @@
 package scaloid.playlistr.remote
 
-import argonaut.Parse
+import argonaut.{DecodeJson, Parse}
 import dispatch._
 import scaloid.playlistr.models.Models.{User, Model}
 
@@ -21,7 +21,7 @@ object Server {
     hostUrl / request.toString << request.params
   }
 
-  def submit (request: Request): Option[User] = {
-    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[User])
+  def submit[M <: Model] (request: Request)(implicit decode: DecodeJson[M]): Option[M] = {
+    Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[M])
   }
 }
