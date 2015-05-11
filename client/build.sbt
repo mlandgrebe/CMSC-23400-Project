@@ -22,6 +22,7 @@ libraryDependencies ++= Seq(
   , "net.databinder.dispatch" %% "dispatch-core" % "0.11.2"
   , "io.argonaut" %% "argonaut" % "6.0.4"
   , "org.scalatest" % "scalatest_2.11" % "2.2.4" % Test
+  , "org.scalamock" %% "scalamock-scalatest-support" % "3.2" % Test
 )
 
 

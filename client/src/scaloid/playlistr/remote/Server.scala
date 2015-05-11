@@ -25,3 +25,7 @@ object Server {
     Http(parseRequest(request) OK as.String).completeOption.flatMap(Parse.decodeOption[M])
   }
 }
+
+class Server(hostUrl : Req = Server.hostUrl) {
+
+}

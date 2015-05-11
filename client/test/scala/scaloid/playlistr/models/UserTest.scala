@@ -1,15 +1,15 @@
 package scaloid.playlistr.models
 
-import argonaut.{DecodeJson, EncodeJson, Parse}
-import org.scalatest.FlatSpec
-import org.scalatest._
+import argonaut.Parse
+import scaloid.playlistr.BaseTest
 import scaloid.playlistr.models.Models.User
+
 import scala.language.postfixOps
 
 /**
  * Created by patrick on 5/9/15.
  */
-class UserTest extends FlatSpec with Matchers {
+class UserTest extends BaseTest {
   val testId = 22
   val testURI = "uri"
   val testName = "John"
@@ -19,9 +19,6 @@ class UserTest extends FlatSpec with Matchers {
 
 
   "A user" should "know its parameters" in {
-    println(testUser.toParam)
-    println(("userId", testId))
-    println(testUser.toParam == ("userId", testId))
     testUser.toParam should equal (("userId", testId toString))
   }
 
