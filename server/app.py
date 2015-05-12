@@ -9,6 +9,6 @@ app = Flask(__name__)
 # the future, we'll want to have two .cfg files that we can switch
 # between depending on where we're running stuff.
 
-app.config.from_pyfile("./local-dev.cfg")
+app.config.from_pyfile("local-dev.cfg")
 
 db = MongoEngine(app)

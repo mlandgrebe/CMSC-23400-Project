@@ -1,6 +1,7 @@
 # This is where the endpoints go.
 from flask import request, make_response, jsonify
 from models import SongRoom, Song, User
+from app import app
 
 # Only POST requests allowed
 @app.route("/register", methods=["POST"])
