@@ -17,7 +17,7 @@ def register():
 
     # Not sure how we need to format location so that MongoEngine understands
     new_room = SongRoom(host, location, name)
-    new_room.commit()
+    new_room.save()
     return jsonify({"result":"OK"})
 
 @app.route("/createUser", methods=["GET", "POST"])
@@ -51,8 +51,6 @@ def user_info():
     user_id = request.values["userId"]
     user = User.objects(id=user_id).first()
     return user.to_json()
-
-
 
 # Test endpoints for us to hit
 @app.route("/echo", methods=["GET", "POST"])
