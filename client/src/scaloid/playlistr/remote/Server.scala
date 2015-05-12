@@ -29,10 +29,11 @@ class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort) {
   // We want a function that goes from Either[Throwable, String] -> \/[String, String] to
   // play nice with scalaz
 
-  def submit[A <: APIRequest](request: A): Future[Either[String, APIResponseType]] =
-    for(res <- Http(parseRequest(request)).either) yield
-      res match {
-        case Left(exc) => Left("Connection error: " + exc.getMessage)
-        case Right(str) => request parseResponse str
-      }
+  def submit[A <: APIRequest](request: A): Future[\/[String, APIResponseType]] =
+    for(res <- Http(parseRequest(request)).either) yield res.F
+  >>= request.parseResponse
+//      res match {
+//        case Left(exc) => Left("Connection error: " + exc.getMessage)
+//        case Right(str) => request parseResponse str
+//      }
 }
