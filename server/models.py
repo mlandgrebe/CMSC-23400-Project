@@ -3,6 +3,7 @@ from app import db
 
 class User(db.Document):
     spotify_uri = db.StringField()
+    name = db.StringField()
 
 # TODO: We probably don't want to associate a song with one vote count
 # globally. Not sure how we want to go about making this specific to a
