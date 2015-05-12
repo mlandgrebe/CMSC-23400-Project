@@ -9,6 +9,8 @@ import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scalaz.{-\/, \/}
+import scalaz.syntax.std.either._
+
 
 /**
  * In a better world, some of these things will be read
@@ -26,14 +28,11 @@ class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort) {
     (hostUrl / request.toString << request.params) OK as.String
   }
 
+
   // We want a function that goes from Either[Throwable, String] -> \/[String, String] to
   // play nice with scalaz
 
   def submit[A <: APIRequest](request: A): Future[\/[String, APIResponseType]] =
-    for(res <- Http(parseRequest(request)).either) yield res.F
-  >>= request.parseResponse
-//      res match {
-//        case Left(exc) => Left("Connection error: " + exc.getMessage)
-//        case Right(str) => request parseResponse str
-//      }
+    for(res <- Http(parseRequest(request)).either) yield
+        res.disjunction.leftMap(_.getMessage).flatMap(request.parseResponse)
 }
