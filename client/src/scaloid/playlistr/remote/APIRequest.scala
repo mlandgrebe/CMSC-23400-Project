@@ -7,6 +7,8 @@ import scala.language.postfixOps
 import scalaz.\/
 import dispatch.Future
 
+import scala.concurrent.ExecutionContext.Implicits.global
+
 /**
  * We need to name this APIRequest so it doesn't conflict with things that Dispatch uses
  */

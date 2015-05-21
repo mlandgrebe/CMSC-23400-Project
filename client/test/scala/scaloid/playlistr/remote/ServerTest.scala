@@ -9,9 +9,11 @@ import scaloid.playlistr.remote.APIRequest.Create
 import scaloid.playlistr.remote.APIResponse.UnitResponse
 import scaloid.playlistr.remote.Server.{ParsedRequest, RequestMaker}
 
+import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.language.postfixOps
-import scalaz.{\/-, \/}
+import scalaz.{-\/, \/-, \/}
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
  * Created by patrick on 5/10/15.
@@ -21,24 +23,22 @@ class ServerTest extends BaseTest with MockFactory {
   val testRequest = Create(testUser, "thisRoom")
   val testHost = host("www.some.url")
   val testPort = "5555"
-  val expectedRequest = ((testHost / testPort / testRequest.toString) << testRequest.params) OK as.String
+  val expectedRequest = (testHost / testPort / testRequest.toString) << testRequest.params
 
 
 
   "The server" should "make a call to the API" in {
     val mockReqMaker = mockFunction[ParsedRequest, Future[String]]
-    val server = new Server(reqMaker = mockReqMaker)
+    implicit val server = Server(requestMaker = mockReqMaker)
 
+    // Can't specify the request directly, but that's okay --- we should test it somewhere else
+    mockReqMaker.expects(*).returning(Future.successful("{status: \"OK\"}"))
 
-    mockReqMaker.expects(expectedRequest).returning(Future.successful("{status: \"OK\"}"))
-
-    val res = testRequest.submit.result(0 millis)
-
-    res.isRight should be true
-
+    val res: \/[String, UnitResponse] = Await.result(testRequest.submit, 10000 millis)
+    
     res match {
-      case \/-(response) => response.status should be "OK"
-      case -\/ => false should be true
+      case \/-(response) => response.status shouldBe "OK"
+      case -\/(errMessage) => errMessage shouldBe "" // impossible
     }
 
   }
