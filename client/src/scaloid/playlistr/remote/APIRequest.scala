@@ -5,6 +5,7 @@ import scaloid.playlistr.models.Models.User
 import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
 import scala.language.postfixOps
 import scalaz.\/
+import dispatch.Future
 
 /**
  * We need to name this APIRequest so it doesn't conflict with things that Dispatch uses
@@ -12,17 +13,24 @@ import scalaz.\/
 object APIRequest {
   sealed trait APIRequest {
     val params: Map[String, String]
-
+    type ResponseType <: APIResponseType
     // this means that we can rely on toString to resolve to our endpoint names
     override def toString = super.toString.toLowerCase
 
-    def parseResponse(string: String): \/[String, APIResponseType]
+    protected def parseResponse(string: String): \/[String, ResponseType]
+
+    def submit(implicit server: Server): Future[\/[String, ResponseType]] =
+      for (res <- server.submit(this)) yield {
+        res.flatMap(parseResponse)
+      }
+
   }
 
   case class Create(host: User, name: String) extends  APIRequest {
     val params = List(host toParam, ("name", name)) toMap
+    override type ResponseType = UnitResponse
 
-    override def parseResponse(string: String): \/[String, UnitResponse] =
+    override protected def parseResponse(string: String) =
       Parse.decodeEither[UnitResponse](string)
   }
 }

@@ -3,9 +3,10 @@ package scaloid.playlistr.remote
 import argonaut.{DecodeJson, Parse}
 import dispatch._
 import scaloid.playlistr.models.Models.{User, Model}
-import com.ning.http.client.Request
+import com.ning.http.client.{AsyncHandler, Request}
 import scaloid.playlistr.remote.APIRequest.{Create, APIRequest}
 import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
+import scaloid.playlistr.remote.Server.RequestMaker
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scalaz.{-\/, \/}
@@ -19,9 +20,13 @@ import scalaz.syntax.std.either._
 object Server {
   val defaultBaseUrl = host("localhost")
   val defaultPort = 8080
+
+  type ParsedRequest = (Request, OkFunctionHandler[String])
+  type RequestMaker = (ParsedRequest) => Future[String]
 }
 
-class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort) {
+class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort,
+              reqMaker: RequestMaker = Http.apply) {
 
   // We're going to rely on case class's toString to to the Right Thing
   private def parseRequest (request: APIRequest) : (Request, OkFunctionHandler[String]) = {
@@ -32,7 +37,7 @@ class Server(hostUrl : Req = Server.defaultBaseUrl / Server.defaultPort) {
   // We want a function that goes from Either[Throwable, String] -> \/[String, String] to
   // play nice with scalaz
 
-  def submit[A <: APIRequest](request: A): Future[\/[String, APIResponseType]] =
-    for(res <- Http(parseRequest(request)).either) yield
-        res.disjunction.leftMap(_.getMessage).flatMap(request.parseResponse)
+  def submit[A <: APIRequest](request: A): Future[\/[String, String]] =
+    for(res <- reqMaker(parseRequest(request)).either) yield
+        res.disjunction.leftMap(_.getMessage)
 }

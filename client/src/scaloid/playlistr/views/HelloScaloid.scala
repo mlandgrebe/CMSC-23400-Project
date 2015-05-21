@@ -72,11 +72,11 @@ class HelloScaloid extends Activity with PlayerNotificationCallback with Connect
   }
 
   override def onConnectionMessage(message: String) {
-    Log.d("MainActivity", "Received connection message: " + message)
+    Log.d("MainActivity", s"Received connection message: $message")
   }
 
   override def onPlaybackEvent(eventType: EventType, playerState: PlayerState) {
-    Log.d("MainActivity", "Playback event received: " + eventType.name())
+    Log.d("MainActivity", s"Playback event received: ${eventType.name()}")
     eventType match {
       case _ => //break
     }
