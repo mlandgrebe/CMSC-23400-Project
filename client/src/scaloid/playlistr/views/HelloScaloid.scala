@@ -64,7 +64,7 @@ class HelloScaloid extends Activity with PlayerNotificationCallback with Connect
   }
 
   override def onLoginFailed(error: Throwable) {
-    Log.d("MainActivity", "Login failed")
+    Log.d("MainActivity", s"Login failed because: $error")
   }
 
   override def onTemporaryError() {
