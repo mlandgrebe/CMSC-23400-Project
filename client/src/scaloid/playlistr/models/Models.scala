@@ -11,10 +11,13 @@ import scala.language.postfixOps
 object Models {
 
   implicit def UserCodecJson: CodecJson[User] =
-      casecodec3(User.apply, User.unapply)("userId", "uri", "name")
+      casecodec3(User.apply, User.unapply)("userId", "spotifyURI", "name")
 
   implicit def SongRoomCodecJson: CodecJson[SongRoom] =
     casecodec1(SongRoom.apply, SongRoom.unapply)("songRoomId")
+
+  implicit def SpotifyURICodecJson: CodecJson[SpotifyURI] =
+    casecodec1(SpotifyURI.apply, SpotifyURI.unapply)("uri")
 
   implicit def UnitResponseCodecJson: CodecJson[UnitResponse] =
     CodecJson(
@@ -42,7 +45,12 @@ object Models {
     override def encode = encodeTo(_.nospaces, this)
   }
 
-  case class User(id: Int, uri: String, name: String) extends Sendable {
+  case class SpotifyURI(uri: String) extends Sendable {
+    override def toParam = ("uri", uri)
+    override def encode = encodeTo(_.nospaces, this)
+  }
+
+  case class User(id: Int, uri: SpotifyURI, name: String) extends Sendable {
     override def toParam = ("userId", id toString)
     override def encode = encodeTo(_.nospaces, this)
   }

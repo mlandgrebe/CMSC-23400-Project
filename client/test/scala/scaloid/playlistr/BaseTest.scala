@@ -1,10 +1,10 @@
 package scaloid.playlistr
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{Inside, FlatSpec, Matchers}
 
 /**
  * All tests should inherit from me.
  */
-class BaseTest extends FlatSpec with Matchers {
+class BaseTest extends FlatSpec with Matchers with Inside {
 
 }

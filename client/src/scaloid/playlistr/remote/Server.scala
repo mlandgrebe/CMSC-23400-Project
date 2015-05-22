@@ -33,7 +33,7 @@ class Server(hostUrl : Req, reqMaker: RequestMaker, executionContext: ExecutionC
 
   // We're going to rely on case class's toString to to the Right Thing
   private def parseRequest (request: APIRequest) : (Request, OkFunctionHandler[String]) = {
-    (hostUrl / request.toString << request.params) OK as.String
+    (hostUrl / request.toEndpoint << request.params) OK as.String
   }
 
 

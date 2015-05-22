@@ -2,7 +2,7 @@ package scaloid.playlistr.models
 
 import argonaut.Parse
 import scaloid.playlistr.BaseTest
-import scaloid.playlistr.models.Models.User
+import scaloid.playlistr.models.Models.{SpotifyURI, User}
 
 import scala.language.postfixOps
 
@@ -11,10 +11,10 @@ import scala.language.postfixOps
  */
 class UserTest extends BaseTest {
   val testId = 22
-  val testURI = "uri"
+  val testURI = SpotifyURI("uri")
   val testName = "John"
   val testUser = new User(testId, testURI, testName)
-  val userJSON = s"""{"userId":$testId,"uri":"$testURI","name":"$testName"}"""
+  val userJSON = s"""{"userId":$testId,"spotifyURI":{"uri":"${testURI.uri}"},"name":"$testName"}"""
 
 
 
@@ -24,14 +24,17 @@ class UserTest extends BaseTest {
 
   it should "be decodable from JSON" in {
     val decoded: Option[User] = Parse.decodeOption[User](userJSON)(Models.UserCodecJson.Decoder)
-
+    println(s"decoded is: $decoded")
     decoded should not be None
     decoded.get shouldBe testUser
   }
 
   it should "be encodable to JSON" in {
-    val encoded = testUser.encode
+    val encoded: String = testUser.encode
     println(encoded)
+    println(userJSON)
+
+    encoded shouldBe userJSON
   }
 
   it should "be be preserved by unencoding and re-encoding" in {
