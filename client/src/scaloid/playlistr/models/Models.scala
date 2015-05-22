@@ -1,7 +1,7 @@
 package scaloid.playlistr.models
 
 import argonaut.Argonaut._
-import argonaut.{Json, EncodeJson, CodecJson}
+import argonaut.{HCursor, Json, EncodeJson, CodecJson}
 import scala.language.postfixOps
 
 
@@ -16,25 +16,35 @@ object Models {
   implicit def SongRoomCodecJson: CodecJson[SongRoom] =
     casecodec1(SongRoom.apply, SongRoom.unapply)("songRoomId")
 
+  implicit def UnitResponseCodecJson: CodecJson[UnitResponse] =
+    CodecJson(
+      (u: UnitResponse) =>
+        ("status" := u.status) ->: jEmptyObject,
+      (c: HCursor) => for {
+        status <- (c --\ "status").as[String]
+      } yield UnitResponse(status)
+    )
+
   private def encodeTo[A, B](op : Json => B, target: A)(implicit encode : EncodeJson[A]) =
     op(encode(target))
 
-  sealed trait Model {
+  sealed trait Receivable
+
+  case class UnitResponse(status: String) extends Receivable
+
+  sealed trait Sendable extends Receivable {
     def toParam: (String, String)
-    // Note that this works because the implicit parameter is passed *HERE*
     def encode: String
   }
 
-  case class SongRoom(id: Int) extends Model {
+  case class SongRoom(id: Int) extends Sendable {
     override def toParam = ("songRoomId", id toString)
-
-    override val encode = encodeTo(_.nospaces, this)
+    override def encode = encodeTo(_.nospaces, this)
   }
 
-  case class User(id: Int, uri: String, name: String) extends Model {
+  case class User(id: Int, uri: String, name: String) extends Sendable {
     override def toParam = ("userId", id toString)
-
-    override val encode = encodeTo(_.nospaces, this)
+    override def encode = encodeTo(_.nospaces, this)
   }
 }
 

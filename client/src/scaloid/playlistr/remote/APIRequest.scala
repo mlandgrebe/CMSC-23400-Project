@@ -1,8 +1,7 @@
 package scaloid.playlistr.remote
 
 import argonaut.Parse
-import scaloid.playlistr.models.Models.User
-import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
+import scaloid.playlistr.models.Models.{UnitResponse, Receivable, User}
 import scala.language.postfixOps
 import scalaz.\/
 import dispatch.Future
@@ -15,7 +14,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 object APIRequest {
   sealed trait APIRequest {
     val params: Map[String, String]
-    type ResponseType <: APIResponseType
+    type ResponseType <: Receivable
     // this means that we can rely on toString to resolve to our endpoint names
     override def toString = super.toString.toLowerCase
 

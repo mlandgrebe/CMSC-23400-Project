@@ -2,10 +2,9 @@ package scaloid.playlistr.remote
 
 import argonaut.{DecodeJson, Parse}
 import dispatch._
-import scaloid.playlistr.models.Models.{User, Model}
+import scaloid.playlistr.models.Models.{User, Sendable}
 import com.ning.http.client.{AsyncHandler, Request}
 import scaloid.playlistr.remote.APIRequest.{Create, APIRequest}
-import scaloid.playlistr.remote.APIResponse.{UnitResponse, APIResponseType}
 import scaloid.playlistr.remote.Server.RequestMaker
 
 import scala.concurrent.ExecutionContext
