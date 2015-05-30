@@ -4,6 +4,9 @@ from models import SongRoom, Song, User
 from app import app, db
 
 
+# In meters? I don't know
+DEFAULT_SR_DISTANCE = 1000
+
 # In the future, only POST requests should be allowed for most of
 # these, but it's easier to test with curl if we allow both for now.
 
@@ -29,6 +32,14 @@ def create_sr():
     new_room = SongRoom(get_user(request, "hostId"), location, name)
     new_room.save()
     return jsonify({"result":"OK"})
+
+@app.route("/nearbySR", methods=["GET", "POST"])
+def nearby_sr():
+    # TODO: how do we parse this?
+    location = params["location"]
+    res = SongRoom.objects(location__near=location,
+                           location__max_distance=DEFAULT_SR_DISTANCE)
+    return jsonify(res)
 
 def modify_sr(request, is_join):
     user = get_user(request)
