@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="client$sources_2.11"
+		revision="0.1-SNAPSHOT"
+		conf="default"
+		confs="default"
+		date="20150521174151"/>
+	<dependencies>
+		<module organisation="com.github.mpeltonen" name="sbt-idea">
+			<revision name="1.6.0" status="release" pubdate="20140208131446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://your.project.url" extra-sbtVersion="0.13" extra-scalaVersion="2.10" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="96">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="3556" time="0" location="/home/patrick/.ivy2/cache/scala_2.10/sbt_0.13/com.github.mpeltonen/sbt-idea/ivy-1.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="0.1-SNAPSHOT" extra-sbtVersion="0.13" extra-scalaVersion="2.10"/>
+				<artifacts>
+					<artifact name="sbt-idea" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23345" time="0" location="/home/patrick/.ivy2/cache/scala_2.10/sbt_0.13/com.github.mpeltonen/sbt-idea/srcs/sbt-idea-1.6.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-effect_2.10">
+			<revision name="7.0.2" status="release" pubdate="20130707073131" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="95">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2671" time="0" location="/home/patrick/.ivy2/cache/org.scalaz/scalaz-effect_2.10/ivy-7.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.0.2/scalaz-effect_2.10-7.0.2.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="7.0.2" rev-constraint-default="7.0.2" rev-constraint-dynamic="7.0.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scalaz-effect_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="21797" time="0" location="/home/patrick/.ivy2/cache/org.scalaz/scalaz-effect_2.10/srcs/scalaz-effect_2.10-7.0.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.0.2/scalaz-effect_2.10-7.0.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sf.proguard" name="proguard-base">
+			<revision name="5.1" status="release" pubdate="20141027151429" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="94">
+				<metadata-artifact status="no" details="" size="2882" time="0" location="/home/patrick/.ivy2/cache/net.sf.proguard/proguard-base/ivy-5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="5.1" rev-constraint-default="5.1" rev-constraint-dynamic="5.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="proguard-base" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1004386" time="0" location="/home/patrick/.ivy2/cache/net.sf.proguard/proguard-base/srcs/proguard-base-5.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.hanhuy.sbt" name="android-sdk-plugin">
+			<revision name="1.3.22" status="release" pubdate="20150428190754" resolver="sbt-chain" artresolver="sbt-chain" extra-sbtVersion="0.13" extra-scalaVersion="2.10" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="52">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2460" time="0" location="/home/patrick/.ivy2/cache/scala_2.10/sbt_0.13/com.hanhuy.sbt/android-sdk-plugin/ivy-1.3.22.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.hanhuy.sbt/android-sdk-plugin/scala_2.10/sbt_0.13/1.3.22/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.3.22" rev-constraint-default="1.3.22" rev-constraint-dynamic="1.3.22" callerrev="0.1-SNAPSHOT" extra-sbtVersion="0.13" extra-scalaVersion="2.10"/>
+				<artifacts>
+					<artifact name="android-sdk-plugin" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="50485" time="0" location="/home/patrick/.ivy2/cache/scala_2.10/sbt_0.13/com.hanhuy.sbt/android-sdk-plugin/srcs/android-sdk-plugin-1.3.22-sources.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.hanhuy.sbt/android-sdk-plugin/scala_2.10/sbt_0.13/1.3.22/srcs/android-sdk-plugin-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.orfjackal.retrolambda" name="retrolambda">
+			<revision name="1.8.0" status="release" pubdate="20141116053255" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="93">
+				<metadata-artifact status="no" details="" size="5549" time="0" location="/home/patrick/.ivy2/cache/net.orfjackal.retrolambda/retrolambda/ivy-1.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/orfjackal/retrolambda/retrolambda/1.8.0/retrolambda-1.8.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.8.0" rev-constraint-default="1.8.0" rev-constraint-dynamic="1.8.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="retrolambda" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="44341" time="0" location="/home/patrick/.ivy2/cache/net.orfjackal.retrolambda/retrolambda/srcs/retrolambda-1.8.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/orfjackal/retrolambda/retrolambda/1.8.0/retrolambda-1.8.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.lint" name="lint">
+			<revision name="24.2.0" status="release" pubdate="20150423183359" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="87">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2753" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/lint/lint/24.2.0/lint-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="lint" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="60391" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint/srcs/lint-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/lint/lint/24.2.0/lint-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jdt.core.compiler" name="ecj">
+			<revision name="4.4" status="release" pubdate="20140625113318" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jdt/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="92">
+				<license name="Eclipse Public License v1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
+				<metadata-artifact status="no" details="" size="2817" time="0" location="/home/patrick/.ivy2/cache/org.eclipse.jdt.core.compiler/ecj/ivy-4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jdt/core/compiler/ecj/4.4/ecj-4.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="4.4" rev-constraint-default="4.4" rev-constraint-dynamic="4.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ecj" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1756780" time="0" location="/home/patrick/.ivy2/cache/org.eclipse.jdt.core.compiler/ecj/srcs/ecj-4.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jdt/core/compiler/ecj/4.4/ecj-4.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.lint" name="lint-checks">
+			<revision name="24.2.0" status="release" pubdate="20150423183702" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="88">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2694" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint-checks/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/lint/lint-checks/24.2.0/lint-checks-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="lint-checks" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="445064" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint-checks/srcs/lint-checks-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/lint/lint-checks/24.2.0/lint-checks-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm-analysis">
+			<revision name="5.0.3" status="release" pubdate="20140524033023" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="91">
+				<metadata-artifact status="no" details="" size="4416" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-analysis/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm-analysis" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1038486" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-analysis/srcs/asm-analysis-5.0.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.lint" name="lint-api">
+			<revision name="24.2.0" status="release" pubdate="20150423183535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="89">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3105" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint-api/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/lint/lint-api/24.2.0/lint-api-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="lint-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="146279" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.lint/lint-api/srcs/lint-api-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/lint/lint-api/24.2.0/lint-api-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.external.lombok" name="lombok-ast">
+			<revision name="0.2.3" status="release" pubdate="20150109145952" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://projectlombok.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="90">
+				<license name="The MIT License" url="http://projectlombok.org/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2784" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.external.lombok/lombok-ast/ivy-0.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.2.3" rev-constraint-default="0.2.3" rev-constraint-dynamic="0.2.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="lombok-ast" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="372127" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.external.lombok/lombok-ast/srcs/lombok-ast-0.2.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.build" name="builder">
+			<revision name="1.2.0" status="release" pubdate="20150423181702" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="62">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4213" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder/ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/build/builder/1.2.0/builder-1.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="builder" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="161661" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder/srcs/builder-1.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/build/builder/1.2.0/builder-1.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm-tree">
+			<revision name="5.0.3" status="release" pubdate="20140524033043" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="86">
+				<metadata-artifact status="no" details="" size="4403" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-tree/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm-tree" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1038486" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-tree/srcs/asm-tree-5.0.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm">
+			<revision name="5.0.3" status="release" pubdate="20140524033012" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="85">
+				<metadata-artifact status="no" details="" size="3758" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm/ivy-5.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.3/asm-5.0.3.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="5.0.3" rev-constraint-default="5.0.3" rev-constraint-dynamic="5.0.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1038486" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm/srcs/asm-5.0.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.0.3/asm-5.0.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.bouncycastle" name="bcpkix-jdk15on">
+			<revision name="1.48" status="release" pubdate="20130212003034" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="83">
+				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
+				<metadata-artifact status="no" details="" size="2801" time="0" location="/home/patrick/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/ivy-1.48.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.48" rev-constraint-default="1.48" rev-constraint-dynamic="1.48" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="bcpkix-jdk15on" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="386348" time="0" location="/home/patrick/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/srcs/bcpkix-jdk15on-1.48-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.bouncycastle" name="bcprov-jdk15on">
+			<revision name="1.48" status="release" pubdate="20130212001801" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="84">
+				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
+				<metadata-artifact status="no" details="" size="2550" time="0" location="/home/patrick/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/ivy-1.48.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.48" rev-constraint-default="1.48" rev-constraint-dynamic="1.48" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="bcprov-jdk15on" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1906726" time="0" location="/home/patrick/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/srcs/bcprov-jdk15on-1.48-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.squareup" name="javawriter">
+			<revision name="2.5.0" status="release" pubdate="20140418142329" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/square/javawriter/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="82">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3354" time="0" location="/home/patrick/.ivy2/cache/com.squareup/javawriter/ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/squareup/javawriter/2.5.0/javawriter-2.5.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="javawriter" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6343" time="0" location="/home/patrick/.ivy2/cache/com.squareup/javawriter/srcs/javawriter-2.5.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.build" name="manifest-merger">
+			<revision name="24.2.0" status="release" pubdate="20150423182835" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="81">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3109" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/manifest-merger/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/build/manifest-merger/24.2.0/manifest-merger-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="manifest-merger" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="112148" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/manifest-merger/srcs/manifest-merger-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/build/manifest-merger/24.2.0/manifest-merger-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools" name="sdk-common">
+			<revision name="24.2.0" status="release" pubdate="20150423183831" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="79">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3010" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/sdk-common/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/sdk-common/24.2.0/sdk-common-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sdk-common" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="315316" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/sdk-common/srcs/sdk-common-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/sdk-common/24.2.0/sdk-common-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.gson" name="gson">
+			<revision name="2.2.4" status="release" pubdate="20130513165652" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="80">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3255" time="0" location="/home/patrick/.ivy2/cache/com.google.code.gson/gson/ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="gson" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="127562" time="0" location="/home/patrick/.ivy2/cache/com.google.code.gson/gson/srcs/gson-2.2.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools" name="sdklib">
+			<revision name="24.2.0" status="release" pubdate="20150423183931" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="70">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3144" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/sdklib/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/sdklib/24.2.0/sdklib-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sdklib" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="594893" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/sdklib/srcs/sdklib-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/sdklib/24.2.0/sdklib-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpmime">
+			<revision name="4.1" status="release" pubdate="20110117141835" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="78">
+				<metadata-artifact status="no" details="" size="5243" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpmime/ivy-4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="4.1" rev-constraint-default="4.1" rev-constraint-dynamic="4.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="httpmime" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="27059" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpmime/srcs/httpmime-4.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpclient">
+			<revision name="4.1.1" status="release" pubdate="20110314160728" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-client" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="74">
+				<metadata-artifact status="no" details="" size="5599" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpclient/ivy-4.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="4.1.1" rev-constraint-default="4.1.1" rev-constraint-dynamic="4.1.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="httpclient" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="450153" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpclient/srcs/httpclient-4.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.4" status="release" pubdate="20090809162217" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="77">
+				<metadata-artifact status="no" details="" size="4990" time="0" location="/home/patrick/.ivy2/cache/commons-codec/commons-codec/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="81359" time="0" location="/home/patrick/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.httpcomponents" name="httpcore">
+			<revision name="4.1" status="release" pubdate="20101113131134" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hc.apache.org/httpcomponents-core-ga/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="75">
+				<metadata-artifact status="no" details="" size="4809" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpcore/ivy-4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="4.1" rev-constraint-default="4.1" rev-constraint-dynamic="4.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="httpcore" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="274396" time="0" location="/home/patrick/.ivy2/cache/org.apache.httpcomponents/httpcore/srcs/httpcore-4.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-compress">
+			<revision name="1.8.1" status="release" pubdate="20140509141752" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-compress/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="73">
+				<metadata-artifact status="no" details="" size="10149" time="0" location="/home/patrick/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.8.1" rev-constraint-default="1.8.1" rev-constraint-dynamic="1.8.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-compress" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="377163" time="0" location="/home/patrick/.ivy2/cache/org.apache.commons/commons-compress/srcs/commons-compress-1.8.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools" name="dvlib">
+			<revision name="24.2.0" status="release" pubdate="20150423183134" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="72">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2572" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/dvlib/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/dvlib/24.2.0/dvlib-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="dvlib" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17218" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/dvlib/srcs/dvlib-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/dvlib/24.2.0/dvlib-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.layoutlib" name="layoutlib-api">
+			<revision name="24.2.0" status="release" pubdate="20150423183249" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="71">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2733" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.layoutlib/layoutlib-api/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/layoutlib/layoutlib-api/24.2.0/layoutlib-api-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="layoutlib-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="81478" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.layoutlib/layoutlib-api/srcs/layoutlib-api-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/layoutlib/layoutlib-api/24.2.0/layoutlib-api-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.build" name="builder-test-api">
+			<revision name="1.2.0" status="release" pubdate="20150423181946" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="65">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2602" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder-test-api/ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/build/builder-test-api/1.2.0/builder-test-api-1.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="builder-test-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7464" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder-test-api/srcs/builder-test-api-1.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/build/builder-test-api/1.2.0/builder-test-api-1.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.ddms" name="ddmlib">
+			<revision name="24.2.0" status="release" pubdate="20150423183029" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="66">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2696" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.ddms/ddmlib/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/ddms/ddmlib/24.2.0/ddmlib-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ddmlib" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="209920" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.ddms/ddmlib/srcs/ddmlib-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/ddms/ddmlib/24.2.0/ddmlib-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sf.kxml" name="kxml2">
+			<revision name="2.3.0" status="release" pubdate="20090421010425" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://kxml.sourceforge.net/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="69">
+				<license name="BSD style" url="http://kxml.cvs.sourceforge.net/viewvc/kxml/kxml2/license.txt?view=markup"/>
+				<license name="Public Domain" url="http://creativecommons.org/licenses/publicdomain"/>
+				<metadata-artifact status="no" details="" size="2624" time="0" location="/home/patrick/.ivy2/cache/net.sf.kxml/kxml2/ivy-2.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.3.0" rev-constraint-default="2.3.0" rev-constraint-dynamic="2.3.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="kxml2" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="44383" time="0" location="/home/patrick/.ivy2/cache/net.sf.kxml/kxml2/srcs/kxml2-2.3.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools" name="common">
+			<revision name="24.2.0" status="release" pubdate="20150423182927" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="67">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2704" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/common/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/common/24.2.0/common-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="common" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="66387" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/common/srcs/common-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/common/24.2.0/common-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="17.0" status="release" pubdate="20140422154746" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="68">
+				<metadata-artifact status="no" details="" size="5931" time="0" location="/home/patrick/.ivy2/cache/com.google.guava/guava/ivy-17.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/17.0/guava-17.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="17.0" rev-constraint-default="17.0" rev-constraint-dynamic="17.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="guava" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1272791" time="0" location="/home/patrick/.ivy2/cache/com.google.guava/guava/srcs/guava-17.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/17.0/guava-17.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools.build" name="builder-model">
+			<revision name="1.2.0" status="release" pubdate="20150423181816" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="63">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2570" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder-model/ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/build/builder-model/1.2.0/builder-model-1.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="builder-model" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="34012" time="0" location="/home/patrick/.ivy2/cache/com.android.tools.build/builder-model/srcs/builder-model-1.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/build/builder-model/1.2.0/builder-model-1.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.android.tools" name="annotations">
+			<revision name="24.2.0" status="release" pubdate="20150423181604" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tools.android.com/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="64">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2415" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/annotations/ivy-24.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/android/tools/annotations/24.2.0/annotations-24.2.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="24.2.0" rev-constraint-default="24.2.0" rev-constraint-dynamic="24.2.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6124" time="0" location="/home/patrick/.ivy2/cache/com.android.tools/annotations/srcs/annotations-24.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/android/tools/annotations/24.2.0/annotations-24.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.databinder.dispatch" name="dispatch-core_2.10">
+			<revision name="0.11.2" status="release" pubdate="20140810174354" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dispatch.databinder.net/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="59">
+				<license name="LGPL v3" url="http://www.gnu.org/licenses/lgpl.txt"/>
+				<metadata-artifact status="no" details="" size="2845" time="0" location="/home/patrick/.ivy2/cache/net.databinder.dispatch/dispatch-core_2.10/ivy-0.11.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/databinder/dispatch/dispatch-core_2.10/0.11.2/dispatch-core_2.10-0.11.2.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.11.2" rev-constraint-default="0.11.2" rev-constraint-dynamic="0.11.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="dispatch-core_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15382" time="0" location="/home/patrick/.ivy2/cache/net.databinder.dispatch/dispatch-core_2.10/srcs/dispatch-core_2.10-0.11.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/databinder/dispatch/dispatch-core_2.10/0.11.2/dispatch-core_2.10-0.11.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.ning" name="async-http-client">
+			<revision name="1.8.10" status="release" pubdate="20140611073655" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/AsyncHttpClient/async-http-client" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="60">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="6911" time="0" location="/home/patrick/.ivy2/cache/com.ning/async-http-client/ivy-1.8.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/ning/async-http-client/1.8.10/async-http-client-1.8.10.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.8.10" rev-constraint-default="1.8.10" rev-constraint-dynamic="1.8.10" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="async-http-client" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="311558" time="0" location="/home/patrick/.ivy2/cache/com.ning/async-http-client/srcs/async-http-client-1.8.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/ning/async-http-client/1.8.10/async-http-client-1.8.10-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-io" name="commons-io">
+			<revision name="2.0.1" status="release" pubdate="20101226111931" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="97">
+				<metadata-artifact status="no" details="" size="6244" time="0" location="/home/patrick/.ivy2/cache/commons-io/commons-io/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.0.1/commons-io-2.0.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-io" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="232877" time="0" location="/home/patrick/.ivy2/cache/commons-io/commons-io/srcs/commons-io-2.0.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-io/commons-io/2.0.1/commons-io-2.0.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.9.2.Final" status="release" pubdate="20140611042254" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="61">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="7085" time="0" location="/home/patrick/.ivy2/cache/io.netty/netty/ivy-3.9.2.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.9.2.Final/netty-3.9.2.Final.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="3.9.2.Final" rev-constraint-default="3.9.2.Final" rev-constraint-dynamic="3.9.2.Final" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="netty" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1132053" time="0" location="/home/patrick/.ivy2/cache/io.netty/netty/srcs/netty-3.9.2.Final-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.9.2.Final/netty-3.9.2.Final-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-logging" name="commons-logging">
+			<revision name="1.1.1" status="release" pubdate="20071126142410" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/logging" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="76">
+				<metadata-artifact status="no" details="" size="3971" time="0" location="/home/patrick/.ivy2/cache/commons-logging/commons-logging/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-logging" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="74976" time="0" location="/home/patrick/.ivy2/cache/commons-logging/commons-logging/srcs/commons-logging-1.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-nop">
+			<revision name="1.7.9" status="release" pubdate="20141216155820" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="57">
+				<metadata-artifact status="no" details="" size="4697" time="0" location="/home/patrick/.ivy2/cache/org.slf4j/slf4j-nop/ivy-1.7.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-nop/1.7.9/slf4j-nop-1.7.9.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.7.9" rev-constraint-default="1.7.9" rev-constraint-dynamic="1.7.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="slf4j-nop" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4398" time="0" location="/home/patrick/.ivy2/cache/org.slf4j/slf4j-nop/srcs/slf4j-nop-1.7.9-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-nop/1.7.9/slf4j-nop-1.7.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.9" status="release" pubdate="20141216155721" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="58">
+				<metadata-artifact status="no" details="" size="4662" time="0" location="/home/patrick/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.9/slf4j-api-1.7.9.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.7.9" rev-constraint-default="1.7.9" rev-constraint-dynamic="1.7.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="50642" time="0" location="/home/patrick/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.9-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.9/slf4j-api-1.7.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.argonaut" name="argonaut_2.10">
+			<revision name="6.0.4" status="release" pubdate="20140421045337" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://argonaut.io" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="55">
+				<license name="BSD-3-Clause" url="http://www.opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2907" time="0" location="/home/patrick/.ivy2/cache/io.argonaut/argonaut_2.10/ivy-6.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/argonaut/argonaut_2.10/6.0.4/argonaut_2.10-6.0.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="6.0.4" rev-constraint-default="6.0.4" rev-constraint-dynamic="6.0.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="argonaut_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30086" time="0" location="/home/patrick/.ivy2/cache/io.argonaut/argonaut_2.10/srcs/argonaut_2.10-6.0.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/argonaut/argonaut_2.10/6.0.4/argonaut_2.10-6.0.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-core_2.10">
+			<revision name="7.0.6" status="release" pubdate="20140305002313" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="56">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2520" time="0" location="/home/patrick/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-7.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.0.6/scalaz-core_2.10-7.0.6.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="7.0.6" rev-constraint-default="7.0.6" rev-constraint-dynamic="7.0.6" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scalaz-core_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="282290" time="0" location="/home/patrick/.ivy2/cache/org.scalaz/scalaz-core_2.10/srcs/scalaz-core_2.10-7.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.0.6/scalaz-core_2.10-7.0.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javassist" name="javassist">
+			<revision name="3.12.1.GA" status="release" pubdate="20101123012130" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="54">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="2838" time="0" location="/home/patrick/.ivy2/cache/javassist/javassist/ivy-3.12.1.GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="3.12.1.GA" rev-constraint-default="3.12.1.GA" rev-constraint-dynamic="3.12.1.GA" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="javassist" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="495186" time="0" location="/home/patrick/.ivy2/cache/javassist/javassist/srcs/javassist-3.12.1.GA-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm-all">
+			<revision name="5.0.2" status="release" pubdate="20140421024810" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="53">
+				<metadata-artifact status="no" details="" size="3766" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-all/ivy-5.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm-all/5.0.2/asm-all-5.0.2.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="5.0.2" rev-constraint-default="5.0.2" rev-constraint-dynamic="5.0.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm-all" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1041260" time="0" location="/home/patrick/.ivy2/cache/org.ow2.asm/asm-all/srcs/asm-all-5.0.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/ow2/asm/asm-all/5.0.2/asm-all-5.0.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="sbt">
+			<revision name="0.13.8" status="release" pubdate="20150320121147" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="0">
+				<metadata-artifact status="no" details="" size="1772" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sbt" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1086" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/sbt/srcs/sbt-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.8/srcs/sbt-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_9_3">
+			<revision name="0.13.8" status="release" pubdate="20150320120726" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="51">
+				<metadata-artifact status="no" details="" size="1486" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_9_3/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="precompiled-2_9_3" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30390" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_9_3/srcs/precompiled-2_9_3-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.8/srcs/precompiled-2_9_3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_9_2">
+			<revision name="0.13.8" status="release" pubdate="20150320120726" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="50">
+				<metadata-artifact status="no" details="" size="1486" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_9_2/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="precompiled-2_9_2" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30390" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_9_2/srcs/precompiled-2_9_2-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.8/srcs/precompiled-2_9_2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_8_2">
+			<revision name="0.13.8" status="release" pubdate="20150320120726" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="49">
+				<metadata-artifact status="no" details="" size="1492" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_8_2/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="precompiled-2_8_2" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30390" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/precompiled-2_8_2/srcs/precompiled-2_8_2-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.8/srcs/precompiled-2_8_2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="main">
+			<revision name="0.13.8" status="release" pubdate="20150320121135" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="2">
+				<metadata-artifact status="no" details="" size="2537" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/main/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="main" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="169913" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/main/srcs/main-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.8/srcs/main-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="logic">
+			<revision name="0.13.8" status="release" pubdate="20150320121039" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="48">
+				<metadata-artifact status="no" details="" size="1649" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/logic/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="logic" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5035" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/logic/srcs/logic-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.8/srcs/logic-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="main-settings">
+			<revision name="0.13.8" status="release" pubdate="20150320121131" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="45">
+				<metadata-artifact status="no" details="" size="2687" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/main-settings/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="main-settings" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30758" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/main-settings/srcs/main-settings-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.8/srcs/main-settings-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="command">
+			<revision name="0.13.8" status="release" pubdate="20150320121128" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="47">
+				<metadata-artifact status="no" details="" size="2168" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/command/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="command" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="20830" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/command/srcs/command-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.8/srcs/command-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="apply-macro">
+			<revision name="0.13.8" status="release" pubdate="20150320121022" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="46">
+				<metadata-artifact status="no" details="" size="1677" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/apply-macro/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="apply-macro" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="13450" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/apply-macro/srcs/apply-macro-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.8/srcs/apply-macro-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="actions">
+			<revision name="0.13.8" status="release" pubdate="20150320121125" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="3">
+				<metadata-artifact status="no" details="" size="3054" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/actions/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="actions" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="30474" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/actions/srcs/actions-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.8/srcs/actions-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="testing">
+			<revision name="0.13.8" status="release" pubdate="20150320121046" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="42">
+				<metadata-artifact status="no" details="" size="1775" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/testing/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="testing" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10144" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/testing/srcs/testing-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.8/srcs/testing-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="test-agent">
+			<revision name="0.13.8" status="release" pubdate="20150320121048" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="43">
+				<metadata-artifact status="no" details="" size="1291" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/test-agent/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="test-agent" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6333" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/test-agent/srcs/test-agent-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.8/srcs/test-agent-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="test-interface">
+			<revision name="1.0" status="release" pubdate="20130628174435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="44">
+				<license name="BSD" url="https://github.com/sbt/test-interface/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2589" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/test-interface/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="test-interface" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="18792" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/test-interface/srcs/test-interface-1.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="tracking">
+			<revision name="0.13.8" status="release" pubdate="20150320121054" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="40">
+				<metadata-artifact status="no" details="" size="1369" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/tracking/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="tracking" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5238" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/tracking/srcs/tracking-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.8/srcs/tracking-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="cache">
+			<revision name="0.13.8" status="release" pubdate="20150320121052" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="41">
+				<metadata-artifact status="no" details="" size="1581" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/cache/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="cache" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7071" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/cache/srcs/cache-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.8/srcs/cache-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="task-system">
+			<revision name="0.13.8" status="release" pubdate="20150320121050" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="38">
+				<metadata-artifact status="no" details="" size="1967" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/task-system/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="task-system" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="8976" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/task-system/srcs/task-system-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.8/srcs/task-system-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="tasks">
+			<revision name="0.13.8" status="release" pubdate="20150320121049" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="39">
+				<metadata-artifact status="no" details="" size="1648" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/tasks/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="tasks" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="11907" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/tasks/srcs/tasks-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.8/srcs/tasks-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="run">
+			<revision name="0.13.8" status="release" pubdate="20150320121055" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="37">
+				<metadata-artifact status="no" details="" size="1849" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/run/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="run" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17681" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/run/srcs/run-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.8/srcs/run-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compiler-ivy-integration">
+			<revision name="0.13.8" status="release" pubdate="20150320121109" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="24">
+				<metadata-artifact status="no" details="" size="1436" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compiler-ivy-integration/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="compiler-ivy-integration" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1656" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compiler-ivy-integration/srcs/compiler-ivy-integration-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.8/srcs/compiler-ivy-integration-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="ivy">
+			<revision name="0.13.8" status="release" pubdate="20150320121041" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="25">
+				<metadata-artifact status="no" details="" size="2237" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/ivy/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ivy" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="105160" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/ivy/srcs/ivy-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.8/srcs/ivy-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="serialization_2.10">
+			<revision name="0.1.1" status="integration" pubdate="20150309200637" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="29">
+				<metadata-artifact status="no" details="" size="2206" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/serialization_2.10/ivy-0.1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/serialization_2.10/0.1.1/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.1.1" rev-constraint-default="0.1.1" rev-constraint-dynamic="0.1.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="serialization_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="26036" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/serialization_2.10/srcs/serialization_2.10-0.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/serialization_2.10/0.1.1/srcs/serialization_2.10-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.spire-math" name="json4s-support_2.10">
+			<revision name="0.6.0" status="release" pubdate="20140923150847" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="36">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3031" time="0" location="/home/patrick/.ivy2/cache/org.spire-math/json4s-support_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="json4s-support_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="852" time="0" location="/home/patrick/.ivy2/cache/org.spire-math/json4s-support_2.10/srcs/json4s-support_2.10-0.6.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.spire-math" name="jawn-parser_2.10">
+			<revision name="0.6.0" status="release" pubdate="20140923150838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="35">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2740" time="0" location="/home/patrick/.ivy2/cache/org.spire-math/jawn-parser_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jawn-parser_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17574" time="0" location="/home/patrick/.ivy2/cache/org.spire-math/jawn-parser_2.10/srcs/jawn-parser_2.10-0.6.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-core_2.10">
+			<revision name="3.2.10" status="release" pubdate="20140513121913" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="32">
+				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2938" time="0" location="/home/patrick/.ivy2/cache/org.json4s/json4s-core_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="3.2.10" rev-constraint-default="3.2.10" rev-constraint-dynamic="3.2.10" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="json4s-core_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="37884" time="0" location="/home/patrick/.ivy2/cache/org.json4s/json4s-core_2.10/srcs/json4s-core_2.10-3.2.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.thoughtworks.paranamer" name="paranamer">
+			<revision name="2.6" status="release" pubdate="20131008225654" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="34">
+				<metadata-artifact status="no" details="" size="4124" time="0" location="/home/patrick/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="paranamer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="26517" time="0" location="/home/patrick/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-ast_2.10">
+			<revision name="3.2.10" status="release" pubdate="20140513121837" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="33">
+				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2516" time="0" location="/home/patrick/.ivy2/cache/org.json4s/json4s-ast_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="3.2.10" rev-constraint-default="3.2.10" rev-constraint-dynamic="3.2.10" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="json4s-ast_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7252" time="0" location="/home/patrick/.ivy2/cache/org.json4s/json4s-ast_2.10/srcs/json4s-ast_2.10-3.2.10-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-pickling_2.10">
+			<revision name="0.10.0" status="release" pubdate="20150206135759" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scala/pickling" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="30">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html "/>
+				<metadata-artifact status="no" details="" size="3211" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang.modules/scala-pickling_2.10/ivy-0.10.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.0/scala-pickling_2.10-0.10.0.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-pickling_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="70275" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang.modules/scala-pickling_2.10/srcs/scala-pickling_2.10-0.10.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-pickling_2.10/0.10.0/scala-pickling_2.10-0.10.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalamacros" name="quasiquotes_2.10">
+			<revision name="2.0.1" status="release" pubdate="20150303045226" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalamacros/paradise" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="31">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html"/>
+				<metadata-artifact status="no" details="" size="2730" time="0" location="/home/patrick/.ivy2/cache/org.scalamacros/quasiquotes_2.10/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="quasiquotes_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="53174" time="0" location="/home/patrick/.ivy2/cache/org.scalamacros/quasiquotes_2.10/srcs/quasiquotes_2.10-2.0.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jcraft" name="jsch">
+			<revision name="0.1.46" status="release" pubdate="20120202063927" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="28">
+				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3203" time="0" location="/home/patrick/.ivy2/cache/com.jcraft/jsch/ivy-0.1.46.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/jcraft/jsch/0.1.46/jsch-0.1.46.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.1.46" rev-constraint-default="0.1.46" rev-constraint-dynamic="0.1.46" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jsch" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="219788" time="0" location="/home/patrick/.ivy2/cache/com.jcraft/jsch/srcs/jsch-0.1.46-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.46/jsch-0.1.46-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt.ivy" name="ivy">
+			<revision name="2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f" status="release" pubdate="20140919083247" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="27">
+				<metadata-artifact status="no" details="" size="2013" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt.ivy/ivy/ivy-2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f" rev-constraint-default="2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f" rev-constraint-dynamic="2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ivy" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="885396" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt.ivy/ivy/srcs/ivy-2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt.ivy/ivy/2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f/srcs/ivy-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="cross">
+			<revision name="0.13.8" status="release" pubdate="20150320121038" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="26">
+				<metadata-artifact status="no" details="" size="1170" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/cross/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="cross" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="248" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/cross/srcs/cross-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.8/srcs/cross-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compiler-integration">
+			<revision name="0.13.8" status="release" pubdate="20150320121107" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="15">
+				<metadata-artifact status="no" details="" size="1726" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compiler-integration/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="compiler-integration" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="12405" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compiler-integration/srcs/compiler-integration-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.8/srcs/compiler-integration-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="persist">
+			<revision name="0.13.8" status="release" pubdate="20150320121103" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="22">
+				<metadata-artifact status="no" details="" size="1783" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/persist/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="persist" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="11163" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/persist/srcs/persist-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.8/srcs/persist-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-tools.sbinary" name="sbinary_2.10">
+			<revision name="0.4.2" status="release" pubdate="20140522001025" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="23">
+				<metadata-artifact status="no" details="" size="1401" time="0" location="/home/patrick/.ivy2/cache/org.scala-tools.sbinary/sbinary_2.10/ivy-0.4.2.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.4.2" rev-constraint-default="0.4.2" rev-constraint-dynamic="0.4.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sbinary_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10117" time="0" location="/home/patrick/.ivy2/cache/org.scala-tools.sbinary/sbinary_2.10/srcs/sbinary_2.10-0.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/srcs/sbinary_2.10-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compile">
+			<revision name="0.13.8" status="release" pubdate="20150320121105" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="20">
+				<metadata-artifact status="no" details="" size="2369" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compile/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="compile" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="25763" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/compile/srcs/compile-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.8/srcs/compile-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="classfile">
+			<revision name="0.13.8" status="release" pubdate="20150320121035" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="21">
+				<metadata-artifact status="no" details="" size="1774" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/classfile/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="classfile" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="8117" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/classfile/srcs/classfile-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.8/srcs/classfile-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="incremental-compiler">
+			<revision name="0.13.8" status="release" pubdate="20150320121059" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="16">
+				<metadata-artifact status="no" details="" size="1989" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/incremental-compiler/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="incremental-compiler" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="46243" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/incremental-compiler/srcs/incremental-compiler-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.8/srcs/incremental-compiler-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="relation">
+			<revision name="0.13.8" status="release" pubdate="20150320121034" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="19">
+				<metadata-artifact status="no" details="" size="1678" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/relation/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="relation" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2694" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/relation/srcs/relation-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.8/srcs/relation-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="logging">
+			<revision name="0.13.8" status="release" pubdate="20150320121032" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="17">
+				<metadata-artifact status="no" details="" size="1759" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/logging/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="logging" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15360" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/logging/srcs/logging-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.8/srcs/logging-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="process">
+			<revision name="0.13.8" status="release" pubdate="20150320121024" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="18">
+				<metadata-artifact status="no" details="" size="1255" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/process/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="process" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10010" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/process/srcs/process-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.8/srcs/process-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="api">
+			<revision name="0.13.8" status="release" pubdate="20150320121017" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="14">
+				<metadata-artifact status="no" details="" size="1561" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/api/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="25157" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/api/srcs/api-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.8/srcs/api-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="completion">
+			<revision name="0.13.8" status="release" pubdate="20150320121030" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="11">
+				<metadata-artifact status="no" details="" size="1845" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/completion/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="completion" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="27971" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/completion/srcs/completion-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.8/srcs/completion-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="jline" name="jline">
+			<revision name="2.11" status="release" pubdate="20130519140100" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="13">
+				<license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="3767" time="0" location="/home/patrick/.ivy2/cache/jline/jline/ivy-2.11.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.11" rev-constraint-default="2.11" rev-constraint-dynamic="2.11" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jline" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="84971" time="0" location="/home/patrick/.ivy2/cache/jline/jline/srcs/jline-2.11-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/jline/jline/2.11/jline-2.11-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="collections">
+			<revision name="0.13.8" status="release" pubdate="20150320121020" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="12">
+				<metadata-artifact status="no" details="" size="1474" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/collections/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="collections" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="28441" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/collections/srcs/collections-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.8/srcs/collections-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="classpath">
+			<revision name="0.13.8" status="release" pubdate="20150320121028" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="4">
+				<metadata-artifact status="no" details="" size="1887" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/classpath/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="classpath" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="13335" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/classpath/srcs/classpath-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.8/srcs/classpath-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="io">
+			<revision name="0.13.8" status="release" pubdate="20150320121026" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="9">
+				<metadata-artifact status="no" details="" size="1634" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/io/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="io" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="26578" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/io/srcs/io-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.8/srcs/io-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="control">
+			<revision name="0.13.8" status="release" pubdate="20150320121019" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="10">
+				<metadata-artifact status="no" details="" size="1178" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/control/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="control" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="3201" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/control/srcs/control-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.8/srcs/control-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="interface">
+			<revision name="0.13.8" status="release" pubdate="20150320121015" resolver="sbt-chain" artresolver="sbt-chain" extra-component="xsbti" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="8">
+				<metadata-artifact status="no" details="" size="1206" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/interface/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT" extra-component="xsbti"/>
+				<artifacts>
+					<artifact name="interface" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="16121" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/interface/srcs/interface-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.8/srcs/interface-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="launcher-interface">
+			<revision name="0.13.8" status="release" pubdate="20150320120935" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="7">
+				<metadata-artifact status="no" details="" size="1222" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/launcher-interface/ivy-0.13.8.xml" searched="false" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.8/ivys/ivy.xml"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="0.13.8" rev-constraint-default="0.13.8" rev-constraint-dynamic="0.13.8" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="launcher-interface" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10603" time="0" location="/home/patrick/.ivy2/cache/org.scala-sbt/launcher-interface/srcs/launcher-interface-0.13.8-sources.jar">
+						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.8/srcs/launcher-interface-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-compiler">
+			<revision name="2.10.4" status="release" pubdate="20140318164738" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="5">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2809" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-compiler" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2058278" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-compiler/srcs/scala-compiler-2.10.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.4" status="release" pubdate="20140318164707" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="6">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2647" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="0.1-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="434883" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.10.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.4" status="release" pubdate="20140318164629" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2487" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom"/>
+				<caller organisation="default" name="client$sources_2.11" conf="default" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="0.1-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/"/>
+				<artifacts>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1062421" time="0" location="/home/patrick/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

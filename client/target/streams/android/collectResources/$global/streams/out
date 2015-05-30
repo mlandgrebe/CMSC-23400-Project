@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mLocal/library-project resources: List(/home/patrick/hacking/courses/CMSC-23400-Project/client/res, /home/patrick/hacking/courses/CMSC-23400-Project/client/bin/renderscript/res, /home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-auth-1.0.0-beta10.aar/res, /home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-player-1.0.0-beta10.aar/res)[0m
+[0m[[0mdebug[0m] [0mapklib/aar resources: List()[0m
+[0m[[0mdebug[0m] [0mAdding resource path: /home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-player-1.0.0-beta10.aar/res[0m
+[0m[[0mdebug[0m] [0mAdding resource path: /home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-auth-1.0.0-beta10.aar/res[0m
+[0m[[0mdebug[0m] [0mAdding resource path: /home/patrick/hacking/courses/CMSC-23400-Project/client/bin/renderscript/res[0m
+[0m[[0mdebug[0m] [0mAdding resource path: /home/patrick/hacking/courses/CMSC-23400-Project/client/res[0m
