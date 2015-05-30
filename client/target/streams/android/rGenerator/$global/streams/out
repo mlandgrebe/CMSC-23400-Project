@@ -1,9 +1,0 @@
-[0m[[0minfo[0m] [0mProcessing resources[0m
-[0m[[0mdebug[0m] [0mAll libs: List(AarLibrary(/home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-auth-1.0.0-beta10.aar,Some(localAAR:spotify-auth-1.0.0-beta10.aar:LOCAL)), AarLibrary(/home/patrick/hacking/courses/CMSC-23400-Project/client/target/aars/localAAR-spotify-player-1.0.0-beta10.aar,Some(localAAR:spotify-player-1.0.0-beta10.aar:LOCAL)))[0m
-[0m[[0mdebug[0m] [0mAll packages: List(com.spotify.sdk.android.authentication, com.spotify.sdk.android.player)[0m
-[0m[[0mdebug[0m] [0mpackageForR: scaloid.playlistr[0m
-[0m[[0mdebug[0m] [0mproguard.txt: /home/patrick/hacking/courses/CMSC-23400-Project/client/bin/proguard.txt[0m
-[0m[[0mdebug[0m] [0mIn modified: Set(/home/patrick/hacking/courses/CMSC-23400-Project/client/bin/AndroidManifest.xml)[0m
-[0m[[0mdebug[0m] [0mInRemoved: Set()[0m
-[0m[[0mdebug[0m] [0mOut checked: Set(/home/patrick/hacking/courses/CMSC-23400-Project/client/gen/scaloid/playlistr/R.java, /home/patrick/hacking/courses/CMSC-23400-Project/client/gen/com/spotify/sdk/android/authentication/R.java, /home/patrick/hacking/courses/CMSC-23400-Project/client/gen/scaloid/playlistr/Manifest.java)[0m
-[0m[[0mdebug[0m] [0mOut modified: Set()[0m

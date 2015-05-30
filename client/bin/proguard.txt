@@ -1,9 +1,0 @@
-# view AndroidManifest.xml #generated:20
--keep class android.test.InstrumentationTestRunner { <init>(...); }
-
-# view AndroidManifest.xml #generated:17
--keep class com.spotify.sdk.android.authentication.LoginActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:9
--keep class scaloid.playlistr.views.HelloScaloid { <init>(...); }
-
