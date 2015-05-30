@@ -4,92 +4,89 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.spotify.sdk.android.authentication.{AuthenticationClient, AuthenticationRequest, AuthenticationResponse}
-import com.spotify.sdk.android.player.PlayerNotificationCallback.{ErrorType, EventType}
-import com.spotify.sdk.android.player.{Config, ConnectionStateCallback, Player, PlayerNotificationCallback, PlayerState, Spotify}
-import scaloid.playlistr.views.HelloScaloid._
+import com.spotify.sdk.android.authentication.{AuthenticationClient, AuthenticationResponse}
+import com.spotify.sdk.android.player.{ConnectionStateCallback, Config, Player, Spotify}
+import dispatch._
+import org.scaloid.common._
+import scaloid.playlistr.remote.APIRequest.Login
+
+import scala.concurrent.ExecutionContext.Implicits.global
+
+import scaloid.playlistr.remote.Authentication
 
 object HelloScaloid {
-
-  private val CLIENT_ID = "2de62f40903247208d3dd5e91846c410"
-
-  private val REDIRECT_URI = "attuapp://callback"
-
-  private val REQUEST_CODE = 1337
+  implicit val loggerTag: LoggerTag = LoggerTag("Authentication")
 }
 
-class HelloScaloid extends Activity with PlayerNotificationCallback with ConnectionStateCallback {
+class HelloScaloid extends SActivity with ConnectionStateCallback  {
 
   private var mPlayer: Player = _
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
+    val google = url("google.com")
+    val res = Http(google OK as.String)
+    debug(res.print)
 
-    //setContentView(android.R.layout.activity_main)
-
-    val builder = new AuthenticationRequest.Builder(CLIENT_ID, AuthenticationResponse.Type.TOKEN, REDIRECT_URI)
-    builder.setScopes(Array("user-read-private", "streaming"))
-    val request = builder.build()
-    AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request)
+    Authentication.authenticateInActivity(this)
   }
 
   protected override def onActivityResult(requestCode: Int, resultCode: Int, intent: Intent) {
     super.onActivityResult(requestCode, resultCode, intent)
-    if (requestCode == REQUEST_CODE) {
-      val response = AuthenticationClient.getResponse(resultCode, intent)
-      if (response.getType == AuthenticationResponse.Type.TOKEN) {
-        val playerConfig = new Config(this, response.getAccessToken, CLIENT_ID)
-        mPlayer = Spotify.getPlayer(playerConfig, this, new Player.InitializationObserver() {
+    assert(Authentication.correctRequest(requestCode))
 
-          override def onInitialized(player: Player) {
-            mPlayer.addConnectionStateCallback(HelloScaloid.this)
-            mPlayer.addPlayerNotificationCallback(HelloScaloid.this)
-            mPlayer.play("spotify:track:2TpxZ7JUBn3uw46aR7qd6V")
-          }
+    val response = AuthenticationClient.getResponse(resultCode, intent)
+    response.getType match {
+      case AuthenticationResponse.Type.TOKEN =>
 
-          override def onError(throwable: Throwable) {
-            Log.e("MainActivity", "Could not initialize player: " + throwable.getMessage)
-          }
-        })
-      }
+      case AuthenticationResponse.Type.ERROR => authFailureDiaglogue(response.getError)
+
+//        val playerConfig = new Config(this, response.getAccessToken, CLIENT_ID)
+//        mPlayer = Spotify.getPlayer(
+//          playerConfig, this, new Player.InitializationObserver() {
+//
+//            override def onInitialized(player: Player) {
+//              mPlayer.addConnectionStateCallback(HelloScaloid.this)
+//              mPlayer.addPlayerNotificationCallback(HelloScaloid.this)
+//              mPlayer.play("spotify:track:2TpxZ7JUBn3uw46aR7qd6V")
+//            }
+//
+//            override def onError(throwable: Throwable) {
+//              Log.e("MainActivity", "Could not initialize player: " + throwable.getMessage)
+//            }
+//          })
     }
   }
 
-  override def onLoggedIn() {
-    Log.d("MainActivity", "User logged in")
+  def authFailureDiaglogue(message: String): Unit = {
+    new AlertDialogBuilder("LOGIN FAILED!", "Reason: $message") {
+      positiveButton("Exit", System.exit(1))
+    }.show()
   }
 
-  override def onLoggedOut() {
-    Log.d("MainActivity", "User logged out")
+  override def onLoggedIn(): Unit = {
+    debug("User logged in")
   }
 
-  override def onLoginFailed(error: Throwable) {
-    Log.d("MainActivity", s"Login failed because: $error")
+  override def onLoggedOut(): Unit = {
+    debug("User logged out")
   }
 
-  override def onTemporaryError() {
-    Log.d("MainActivity", "Temporary error occurred")
+  override def onLoginFailed(error: Throwable): Unit = {
+    debug(s"Login failed because: $error")
+    authFailureDiaglogue(error.toString)
   }
 
-  override def onConnectionMessage(message: String) {
-    Log.d("MainActivity", s"Received connection message: $message")
+  override def onTemporaryError(): Unit = {
+    debug("Temporary error occurred")
   }
 
-  override def onPlaybackEvent(eventType: EventType, playerState: PlayerState) {
-    Log.d("MainActivity", s"Playback event received: ${eventType.name()}")
-    eventType match {
-      case _ => //break
-    }
+  override def onConnectionMessage(message: String): Unit = {
+    debug(s"Received connection message: $message")
   }
 
-  override def onPlaybackError(errorType: ErrorType, errorDetails: String) {
-    Log.d("MainActivity", "Playback error received: " + errorType.name())
-    errorType match {
-      case _ => //break
-    }
-  }
 
-  protected override def onDestroy() {
+  override def onDestroy(): Unit = {
     Spotify.destroyPlayer(this)
     super.onDestroy()
   }

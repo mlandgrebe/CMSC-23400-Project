@@ -44,8 +44,6 @@ object APIRequest {
     override type ResponseType = User
 
     override protected val parseResponse = parseResponseWith(UserCodecJson) _
-//    override protected def parseResponse(string: String) =
-//      Parse.decodeEither[ResponseType](string)
   }
 
   case class Register(user: User) extends APIRequest {

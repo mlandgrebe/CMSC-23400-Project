@@ -17,9 +17,9 @@ proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-keepattr
   , "-dontwarn scala.collection.**" // required from Scala 2.11.4
   , "-dontwarn org.scaloid.**" // this can be omitted if current Android Build target is android-16
   , "-dontwarn **" // manually added --- EXTREMELY DANGEROUS
-  , "-keep com.spotify.sdk.android.player.Config"
-  , "-keep com.spotify.sdk.android.player.ConnectionStateCallback"
-  , "-keep com.spotify.sdk.android.player.NativePlayerNotificationCallback"
+//  , "-keep com.spotify.sdk.android.player.Config"
+//  , "-keep com.spotify.sdk.android.player.ConnectionStateCallback"
+//  , "-keep com.spotify.sdk.android.player.NativePlayerNotificationCallback"
 )
 
 libraryDependencies ++= Seq(
