@@ -21,7 +21,7 @@ class SongRoom(db.Document):
     host = db.ReferenceField('User')
 
     members = db.ListField(db.ReferenceField('User'))
-    queue = db.ListField(db.ReferenceField('SongQueue'))
+    queue = db.ReferenceField('SongQueue')
     # played_history = db.ListField(db.ReferenceField('Song'))
 
     location = db.PointField()

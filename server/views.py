@@ -1,6 +1,6 @@
 # This is where the endpoints go.
 from flask import request, make_response, jsonify, Response, json
-from models import SongRoom, Song, User
+from models import SongRoom, Song, User, SongQueue
 from app import app, db
 
 
@@ -35,10 +35,12 @@ def create_sr():
     print location
     name = params["name"]
 
-    # Not sure how we need to format location so that MongoEngine understands
+    new_q = SongQueue(songs=[])
+    new_q.save()
     new_room = SongRoom(host=get_user(request, "hostId"),
                         location=location,
-                        name=name)
+                        name=name,
+                        queue=new_q)
     new_room.save()
     print new_room.to_json()
     return new_room.to_json()
@@ -89,10 +91,15 @@ def submit_vote():
     return "OK"
 
 @app.route("/getQueue", methods=["GET", "POST"])
-def get_queue():
+def get_songqueue():
     sr = get_sr(request)
-    return jsonify(sr.queue)
+    return sr.queue.to_json()
 
+@app.route("/getSongs", methods=["GET", "POST"])
+def get_songs():
+    sq = get_queue(request)
+    return Response(json.dumps(sq.songs),
+                    mimetype="application/json")
 
 @app.route("/srMembers", methods=["GET", "POST"])
 def sr_members():
