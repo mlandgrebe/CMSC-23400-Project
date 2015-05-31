@@ -1,6 +1,8 @@
 # This is where the endpoints go.
 from flask import request, make_response, jsonify, Response, json
-from models import SongRoom, Song, User, SongQueue
+from flask.ext.mongoengine import mongoengine
+from mongoengine import NotUniqueError
+from models import SongRoom, Song, User, SongQueue, Vote
 from app import app, db
 
 
@@ -25,8 +27,17 @@ def get_song(req, tag="songId"):
 def get_queue(req, tag="queueId"):
     return get_from(SongQueue, req, tag)
 
+def get_uri(req, tag="spotifyURI"):
+    return req.values[tag]
+
 def parse_loc(req, tag="location"):
     return [float(x) for x in req.values[tag].strip("()").split(",")]
+
+def parse_bool(req, tag):
+    return req.values[tag] == "true"
+
+def mk_json(obj):
+    return Response(json.dumps(obj), mimetype="application/json")
 
 @app.route("/createSR", methods=["GET", "POST"])
 def create_sr():
@@ -48,10 +59,10 @@ def create_sr():
 @app.route("/nearbySR", methods=["GET", "POST"])
 def nearby_sr():
     # TODO: how do we parse this?
-    location = params["location"]
+    location = parse_loc(request)
     res = SongRoom.objects(location__near=location,
                            location__max_distance=DEFAULT_SR_DISTANCE)
-    return jsonify(res)
+    return mk_json(res)
 
 def modify_sr(request, is_join):
     user = get_user(request)
@@ -80,15 +91,22 @@ def leave_sr():
 @app.route("/getVotes", methods=["GET", "POST"])
 def get_votes():
     song = get_song(request)
-    return jsonify(song.votes)
+    return mk_json(song.votes)
 
 @app.route("/submitVote", methods=["GET", "POST"])
 def submit_vote():
     user = get_user(request)
-    is_up = request.values["isUp"]
-    vote = Vote(user, bool(is_up))
-    vote.save()
-    return "OK"
+    is_up = parse_bool(request, "isUp")
+    print get_song(request).to_json()
+    vote = Vote(user=user, song=get_song(request), isUp=is_up)
+
+    try:
+        vote.save()
+        Song.objects(id=request.values["songId"]).update_one(push__votes=vote)
+    except NotUniqueError:
+        pass
+
+    return mk_json(get_song(request).votes)
 
 @app.route("/getQueue", methods=["GET", "POST"])
 def get_songqueue():
@@ -98,33 +116,33 @@ def get_songqueue():
 @app.route("/getSongs", methods=["GET", "POST"])
 def get_songs():
     sq = get_queue(request)
-    return Response(json.dumps(sq.songs),
-                    mimetype="application/json")
+    return mk_json(sq.songs)
 
 @app.route("/srMembers", methods=["GET", "POST"])
 def sr_members():
     sr = get_sr(request)
-    return Response(json.dumps(sr.members),
-                    mimetype="application/json")
+    return mk_json(sr.members)
 
 # This is racy
 @app.route("/changeQueue", methods=["GET", "POST"])
 def change_queue():
-    queue = get_queue(request)
+    is_enq = parse_bool(request, "isEnq")
     song = get_song(request)
-    is_enq = bool(request.values["isEnq"])
-    current_queue = queue.songs
+
+    def to_update():
+        return SongQueue.objects(id=request.values["queueId"]).update_one
 
     if is_enq:
-        current_queue.append(song)
+        to_update()(push__songs=song)
     else:
-        current_queue = [s for s in current_queue if s != song]
-    queue.modify(songs=current_queue)
+        to_update()(pull__songs=song)
+
+    return mk_json(get_queue(request).songs)
 
 
 @app.route("/createUser", methods=["GET", "POST"])
 def create_user():
-    spotify_uri = request.values["spotifyURI"]
+    spotify_uri = get_uri(request)
     name = request.values["name"]
     print spotify_uri
     print name
@@ -157,11 +175,23 @@ def user_info():
     user = User.objects(id=user_id).first()
     return user.to_json()
 
+@app.route("/createSong", methods=["GET", "POST"])
+def create_song():
+    spotify_uri = get_uri(request)
+    song = Song(spotifyURI=spotify_uri, votes=[])
+    song.save()
+    return song.to_json()
+
+
 # For integration tests
 @app.route("/dropUsers", methods=["GET", "POST"])
 def drop_users():
     print "Dropping"
     User.objects().delete()
+    SongRoom.objects().delete()
+    Song.objects().delete()
+    SongQueue.objects().delete()
+    Vote.objects().delete()
     return "OK"
 
 # Test endpoints for us to hit

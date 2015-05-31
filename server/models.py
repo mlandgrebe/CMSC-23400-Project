@@ -6,7 +6,8 @@ class User(db.Document):
     name = db.StringField()
 
 class Vote(db.Document):
-    user = db.ReferenceField('User')
+    user = db.ReferenceField('User', unique=True)
+    song = db.ReferenceField('Song', unique_with='user')
     isUp = db.BooleanField()
 
 # TODO: We probably don't want to associate a song with one vote count
