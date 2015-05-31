@@ -12,8 +12,14 @@ DEFAULT_SR_DISTANCE = 1000
 # In the future, only POST requests should be allowed for most of
 # these, but it's easier to test with curl if we allow both for now.
 
+def obj_ref_acquire(obj, req, tag):
+    return obj.objects(id=req.values[tag])
+
 def get_from(obj, req, tag):
-    return obj.objects(id=req.values[tag]).first()
+    return obj_ref_acquire(obj, req, tag).first()
+
+def update_from(obj, req, tag):
+    return obj_ref_acquire(obj, req, tag).update_one
 
 def get_sr(req, tag='srId'):
     return get_from(SongRoom, req, tag)
@@ -26,6 +32,9 @@ def get_song(req, tag="songId"):
 
 def get_queue(req, tag="queueId"):
     return get_from(SongQueue, req, tag)
+
+def update_queue(req, tag="queueId"):
+    return update_from(SongQueue, req, tag)
 
 def get_uri(req, tag="spotifyURI"):
     return req.values[tag]
@@ -108,6 +117,12 @@ def submit_vote():
 
     return mk_json(get_song(request).votes)
 
+@app.route("/popQueue", methods=["GET"])
+def pop_song():
+    # -1? 1?
+    song = update_queue(request)(pop__vote=-1)
+    return song.to_json()
+
 @app.route("/getQueue", methods=["GET", "POST"])
 def get_songqueue():
     sr = get_sr(request)
@@ -129,13 +144,10 @@ def change_queue():
     is_enq = parse_bool(request, "isEnq")
     song = get_song(request)
 
-    def to_update():
-        return SongQueue.objects(id=request.values["queueId"]).update_one
-
     if is_enq:
-        to_update()(push__songs=song)
+        update_queue(request)(push__songs=song)
     else:
-        to_update()(pull__songs=song)
+        update_queue(request)(pull__songs=song)
 
     return mk_json(get_queue(request).songs)
 
