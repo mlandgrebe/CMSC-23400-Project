@@ -2,18 +2,18 @@
 from app import db
 
 class User(db.Document):
-    spotify_uri = db.StringField()
+    spotifyURI = db.StringField()
     name = db.StringField()
 
 class Vote(db.Document):
     user = db.ReferenceField('User')
-    is_up = db.BooleanField()
+    isUp = db.BooleanField()
 
 # TODO: We probably don't want to associate a song with one vote count
 # globally. Not sure how we want to go about making this specific to a
 # room
 class Song(db.Document):
-    spotify_uri = db.StringField()
+    spotifyURI = db.StringField()
     votes = db.ListField(db.ReferenceField('Vote'))
 
 class SongRoom(db.Document):
@@ -22,7 +22,7 @@ class SongRoom(db.Document):
 
     members = db.ListField(db.ReferenceField('User'))
     queue = db.ListField(db.ReferenceField('SongQueue'))
-    played_history = db.ListField(db.ReferenceField('Song'))
+    # played_history = db.ListField(db.ReferenceField('Song'))
 
     location = db.PointField()
 
