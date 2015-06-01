@@ -73,6 +73,11 @@ def parse_instant(s, u):
 def mk_json(obj):
     return Response(json.dumps(obj), mimetype="application/json")
 
+def get_ordered_songs(queue):
+    return list(reversed(
+        sorted(queue.songs,
+               key=lambda s: sum(v.isUp for v in s.votes))))
+
 @app.route("/createSR", methods=["GET", "POST"])
 def create_sr():
     params = request.values
@@ -148,10 +153,9 @@ def pop_song():
     # -1? 1?
     room = get_sr(request)
     queue = room.queue
-    song = queue.songs[0]
-    print queue.songs
-    print [s.to_json() for s in queue.songs]
-    queue.modify(pop__songs=1)
+    songs = get_ordered_songs(queues)
+    song = songs[-1]
+    queue.modify(pull__songs=song)
     room.modify(playing=song)
     print [s.to_json() for s in queue.songs]
     return song.to_json()
@@ -183,7 +187,7 @@ def get_songqueue():
 @app.route("/getSongs", methods=["GET", "POST"])
 def get_songs():
     sq = get_queue(request)
-    return mk_json(sq.songs)
+    return mk_json(get_ordered_songs(sq))
 
 @app.route("/srMembers", methods=["GET", "POST"])
 def sr_members():
