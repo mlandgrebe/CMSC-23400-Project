@@ -22,6 +22,7 @@ class Song(db.Document):
     startTime = db.DateTimeField()
     stopTime = db.DateTimeField()
     songRoom = db.ReferenceField('SongRoom')
+    name = db.StringField()
 
 class SongRoom(db.Document):
     name = db.StringField()
