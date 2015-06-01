@@ -10,14 +10,15 @@ class Vote(db.Document):
     song = db.ReferenceField('Song', unique_with='user')
     isUp = db.BooleanField()
 
-# TODO: We probably don't want to associate a song with one vote count
-# globally. Not sure how we want to go about making this specific to a
-# room
+class MotionInstant(db.Document):
+    norm = db.FloatField()
+    time = db.DateTimeField()
+
 class Song(db.Document):
     spotifyURI = db.StringField()
     votes = db.ListField(db.ReferenceField('Vote'))
     startTime = db.DateTimeField()
-    endTime = db.DateTimeField()
+    stopTime = db.DateTimeField()
     songRoom = db.ReferenceField('SongRoom')
 
 class SongRoom(db.Document):

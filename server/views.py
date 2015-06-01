@@ -13,6 +13,18 @@ DEFAULT_SR_DISTANCE = 1000
 # In the future, only POST requests should be allowed for most of
 # these, but it's easier to test with curl if we allow both for now.
 
+class Empty:
+    def to_json(self):
+        return "{}"
+
+empty = Empty()
+
+def mk_date(d):
+    if d:
+        return {'date': d.isoformat().split('.')[0]}
+    else:
+        return {}
+
 def obj_ref_acquire(obj, req, tag):
     return obj.objects(id=req.values[tag])
 
@@ -48,6 +60,13 @@ def parse_loc(req, tag="location"):
 
 def parse_bool(req, tag):
     return req.values[tag] == "true"
+
+# BE AWARE THAT YOU MIGHT BE FUCKING UP THE TZ
+def parse_instant(s, u):
+    d = json.reads(s)
+    ts = datetime.utcfromtimestamp(d['timestamp'])
+    norm = float(d['norm'])
+    return MotionInstant(norm=norm, time=ts, user=u)
 
 def mk_json(obj):
     return Response(json.dumps(obj), mimetype="application/json")
@@ -125,25 +144,31 @@ def submit_vote():
 @app.route("/popSong", methods=["GET"])
 def pop_song():
     # -1? 1?
-    room = get_room(request)
+    room = get_sr(request)
     queue = room.queue
-    song = queue.modify(pop__song=-1)
+    song = queue.songs[0]
+    print queue.songs
+    print [s.to_json() for s in queue.songs]
+    queue.modify(pop__songs=1)
     room.modify(playing=song)
+    print [s.to_json() for s in queue.songs]
     return song.to_json()
 
 @app.route("/getPlaying", methods=["GET"])
 def get_playing():
-    return get_room(request).playing.to_json()
+    playing = get_sr(request).playing
+    return (playing or empty).to_json()
 
 @app.route("/startPlaying", methods=["GET"])
 def start_playing():
-    get_room(request).playing.modify(startTime=datetime.now())
+    get_sr(request).playing.modify(startTime=datetime.now())
     return "OK"
 
 @app.route("/stopPlaying", methods=["GET"])
 def stop_playing():
-    room = get_room(request)
-    song = room.playing.modify(stopTime=datetime.now())
+    room = get_sr(request)
+    song = room.playing
+    song.modify(stopTime=datetime.now())
     room.modify(playing=None, push__history=song)
 
     return "OK"
@@ -167,7 +192,8 @@ def sr_members():
 def change_queue():
     is_enq = parse_bool(request, "isEnq")
     song = get_song(request)
-    song.songRoom = get_queue(request)
+    print get_queue(request)
+    song.songRoom = SongRoom.objects(queue=get_queue(request)).first()
     song.save()
 
     if is_enq:
@@ -220,6 +246,17 @@ def create_song():
     song.save()
     return song.to_json()
 
+@app.route("/getStart")
+def get_start():
+    song = get_song(request)
+    print song.startTime and song.startTime.isoformat()
+    return mk_json(mk_date(song.startTime))
+
+@app.route("/getStop")
+def get_stop():
+    song = get_song(request)
+    print song.stopTime and song.stopTime.isoformat()
+    return mk_json(mk_date(song.stopTime))
 
 # For integration tests
 @app.route("/dropUsers", methods=["GET", "POST"])
@@ -231,6 +268,23 @@ def drop_users():
     SongQueue.objects().delete()
     Vote.objects().delete()
     return "OK"
+
+@app.route("/submitActivity")
+def submit_activity():
+    user = get_user(request)
+    for instant in request.values['instants']:
+        print instant
+        mi = parse_instant(instant, user)
+        mi.save()
+
+    return "OK"
+
+@app.route("/getActivity")
+def get_activity():
+    user = get_user(request)
+
+    return mk_json([mi.to_json() for mi in
+                    MotionInstant.objects(user=user)])
 
 # Test endpoints for us to hit
 @app.route("/echo", methods=["GET", "POST"])
