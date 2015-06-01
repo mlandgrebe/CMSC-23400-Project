@@ -24,5 +24,6 @@ class TestGrapher(unittest.TestCase):
         got = mis_for_song(self.song)
         self.assertEqual(len(got), 11)
 
+
 if __name__ == "__main__":
     unittest.main()

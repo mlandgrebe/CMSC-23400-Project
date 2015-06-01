@@ -41,13 +41,13 @@ def extract(mis):
             mis]
 
 def get_time(mis):
-    return (fmt_time(mi.time) for mi in mis)
+    return [fmt_time(mi.time) for mi in mis]
 
 def get_norm(mis):
-    return (mi.norm for mi in mis)
+    return [mi.norm for mi in mis]
 
 def get_both(mis):
-    return [(fmt_time(mi.time), mi.norm) for mi in mis]
+    return [(mi.norm, fmt_time(mi.time)) for mi in mis]
 
 def df_for_song(song):
     mis = mis_for_song(song)

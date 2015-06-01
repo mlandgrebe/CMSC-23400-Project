@@ -17,6 +17,7 @@ class MotionInstant(db.Document):
 
 class Song(db.Document):
     spotifyURI = db.StringField()
+    trackName = db.StringField()
     votes = db.ListField(db.ReferenceField('Vote'))
     startTime = db.DateTimeField()
     stopTime = db.DateTimeField()

@@ -278,11 +278,12 @@ def drop_users():
 @app.route("/bulkEnq", methods=["GET", "POST"])
 def bulk_enq():
     uris = request.values.getlist('spotifyURIs')
+    names = request.values.getlist('names')
     queue = get_queue(request)
     # Ugly, sorry
     sr = SongRoom.objects(queue=get_queue(request)).first()
 
-    for uri in uris:
+    for uri, name in zip(uris, name):
         s = Song(spotifyURI=uri, songRoom=sr)
         s.save()
         update_queue(request)(push__songs=s)
