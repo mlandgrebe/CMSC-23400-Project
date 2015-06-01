@@ -283,7 +283,7 @@ def bulk_enq():
     # Ugly, sorry
     sr = SongRoom.objects(queue=get_queue(request)).first()
 
-    for uri, name in zip(uris, name):
+    for uri, name in zip(uris, names):
         s = Song(spotifyURI=uri, songRoom=sr)
         s.save()
         update_queue(request)(push__songs=s)
