@@ -279,12 +279,14 @@ def drop_users():
 def bulk_enq():
     uris = request.values.getlist('spotifyURIs')
     names = request.values.getlist('names')
+    print uris
+    print names
     queue = get_queue(request)
     # Ugly, sorry
     sr = SongRoom.objects(queue=get_queue(request)).first()
 
     for uri, name in zip(uris, names):
-        s = Song(spotifyURI=uri, songRoom=sr)
+        s = Song(spotifyURI=uri, songRoom=sr, name=name)
         s.save()
         update_queue(request)(push__songs=s)
     return "OK"
