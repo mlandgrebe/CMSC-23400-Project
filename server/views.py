@@ -4,6 +4,7 @@ from flask.ext.mongoengine import mongoengine
 from mongoengine import NotUniqueError
 from models import SongRoom, Song, User, SongQueue, Vote
 from app import app, db
+from datetime import datetime
 
 
 # In meters? I don't know
@@ -35,6 +36,9 @@ def get_queue(req, tag="queueId"):
 
 def update_queue(req, tag="queueId"):
     return update_from(SongQueue, req, tag)
+
+def update_song(req, tag="songId"):
+    return update_from(Song, req, tag)
 
 def get_uri(req, tag="spotifyURI"):
     return req.values[tag]
@@ -117,11 +121,32 @@ def submit_vote():
 
     return mk_json(get_song(request).votes)
 
-@app.route("/popQueue", methods=["GET"])
+# Racy, but only one person should touch this
+@app.route("/popSong", methods=["GET"])
 def pop_song():
     # -1? 1?
-    song = update_queue(request)(pop__vote=-1)
+    room = get_room(request)
+    queue = room.queue
+    song = queue.modify(pop__song=-1)
+    room.modify(playing=song)
     return song.to_json()
+
+@app.route("/getPlaying", methods=["GET"])
+def get_playing():
+    return get_room(request).playing.to_json()
+
+@app.route("/startPlaying", methods=["GET"])
+def start_playing():
+    get_room(request).playing.modify(startTime=datetime.now())
+    return "OK"
+
+@app.route("/stopPlaying", methods=["GET"])
+def stop_playing():
+    room = get_room(request)
+    song = room.playing.modify(stopTime=datetime.now())
+    room.modify(playing=None, push__history=song)
+
+    return "OK"
 
 @app.route("/getQueue", methods=["GET", "POST"])
 def get_songqueue():
@@ -138,11 +163,12 @@ def sr_members():
     sr = get_sr(request)
     return mk_json(sr.members)
 
-# This is racy
 @app.route("/changeQueue", methods=["GET", "POST"])
 def change_queue():
     is_enq = parse_bool(request, "isEnq")
     song = get_song(request)
+    song.songRoom = get_queue(request)
+    song.save()
 
     if is_enq:
         update_queue(request)(push__songs=song)

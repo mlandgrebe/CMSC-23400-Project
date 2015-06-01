@@ -18,6 +18,7 @@ class Song(db.Document):
     votes = db.ListField(db.ReferenceField('Vote'))
     startTime = db.DateTimeField()
     endTime = db.DateTimeField()
+    songRoom = db.ReferenceField('SongRoom')
 
 class SongRoom(db.Document):
     name = db.StringField()
@@ -26,7 +27,7 @@ class SongRoom(db.Document):
     members = db.ListField(db.ReferenceField('User'))
     queue = db.ReferenceField('SongQueue')
     playing = db.ReferenceField('Song')
-    # played_history = db.ListField(db.ReferenceField('Song'))
+    history = db.ListField(db.ReferenceField('Song'))
 
     location = db.PointField()
 
