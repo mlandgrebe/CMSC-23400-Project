@@ -18,6 +18,11 @@ sns.set(style="darkgrid")
 #         times.append(mi.time)
 #     return (norms, times)
 
+def mis_for_song(song):
+    return MotionInstant.objects(
+        Q(time__gte=song.startTime) &
+        Q(time__lte=song.stopTime))
+
 def df_for_song(song):
     mis = MotionInstant.objects(
         Q(time_gte=song.startTime) &
