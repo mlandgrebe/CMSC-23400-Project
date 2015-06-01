@@ -2,7 +2,7 @@
 from flask import request, make_response, jsonify, Response, json
 from flask.ext.mongoengine import mongoengine
 from mongoengine import NotUniqueError
-from models import SongRoom, Song, User, SongQueue, Vote
+from models import SongRoom, Song, User, SongQueue, Vote, MotionInstant
 from app import app, db
 from datetime import datetime
 
@@ -63,7 +63,9 @@ def parse_bool(req, tag):
 
 # BE AWARE THAT YOU MIGHT BE FUCKING UP THE TZ
 def parse_instant(s, u):
-    d = json.reads(s)
+    print s
+    print u
+    d = json.loads(s)
     ts = datetime.utcfromtimestamp(d['timestamp'])
     norm = float(d['norm'])
     return MotionInstant(norm=norm, time=ts, user=u)
@@ -269,17 +271,38 @@ def drop_users():
     Vote.objects().delete()
     return "OK"
 
-@app.route("/submitActivity")
+@app.route("/bulkEnq", methods=["GET", "POST"])
+def bulk_enq():
+    uris = request.values.getlist('spotifyURIs')
+    queue = get_queue(request)
+    # Ugly, sorry
+    sr = SongRoom.objects(queue=get_queue(request)).first()
+
+    for uri in uris:
+        s = Song(spotifyURI=uri, songRoom=sr)
+        s.save()
+        update_queue(request)(push__songs=s)
+    return "OK"
+
+
+@app.route("/submitActivity", methods=["GET", "POST"])
 def submit_activity():
     user = get_user(request)
-    for instant in request.values['instants']:
+    print request.values['instants']
+    print request.values
+    instants = request.values.getlist('instants')
+    for instant_s in instants:
+        instant = json.loads(instant_s)
         print instant
-        mi = parse_instant(instant, user)
+        mi = MotionInstant(user=user,
+                           time=datetime.utcfromtimestamp(
+                               instant['timestamp']),
+                           norm=instant['norm'])
         mi.save()
 
     return "OK"
 
-@app.route("/getActivity")
+@app.route("/getActivity", methods=["GET", "POST"])
 def get_activity():
     user = get_user(request)
 

@@ -11,6 +11,7 @@ class Vote(db.Document):
     isUp = db.BooleanField()
 
 class MotionInstant(db.Document):
+    user = db.ReferenceField('User')
     norm = db.FloatField()
     time = db.DateTimeField()
 
