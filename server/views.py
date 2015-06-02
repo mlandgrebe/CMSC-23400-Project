@@ -153,7 +153,7 @@ def pop_song():
     # -1? 1?
     room = get_sr(request)
     queue = room.queue
-    songs = get_ordered_songs(queues)
+    songs = get_ordered_songs(queue)
     song = songs[-1]
     queue.modify(pull__songs=song)
     room.modify(playing=song)
@@ -174,7 +174,9 @@ def start_playing():
 def stop_playing():
     room = get_sr(request)
     song = room.playing
-    song.modify(stopTime=datetime.now())
+
+    if song:
+        song.modify(stopTime=datetime.now())
     room.modify(playing=None, push__history=song)
 
     return "OK"
